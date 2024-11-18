@@ -12,22 +12,28 @@ To use it, simply use the following statement :
     query = "Select * from MY_TABLE;"
     query_params = parser.parse_request(query)
 """
+from antlr4 import CommonTokenStream, InputStream, ParseTreeWalker
 
-from dataclasses import dataclass
+from .SqlLexer import SqlLexer
+from .SqlListener import SqlListener
+from .SqlParser import SqlParser
 
-@dataclass
 class SQL2JSON:
     """
     SQL Parser main class
     """
+    def __init__(self):
+        self.listener = SqlListener()
 
     def parse_request(self, query: str) -> str:
         """ Parse SQL request
 
         :type query: str
         :param query: SQL query
-
-        :raises NotImplementedError: Method not yet implemented!
         """
-        raise NotImplementedError(f'The parse method with the query {query} ' +
-                                  'is not yet implemented!')
+        lexer = SqlLexer(InputStream(query))
+        stream = CommonTokenStream(lexer)
+        parser = SqlParser(stream)
+
+        walker = ParseTreeWalker()
+        walker.walk(self.listener, parser.whole_query())

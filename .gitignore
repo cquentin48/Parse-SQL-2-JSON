@@ -5,5 +5,5 @@ build/
 __pycache__/
 
 # Coverage result
-htmlcov/
+coverage_html_reports/
 .coverage

@@ -12,6 +12,10 @@ classifiers = [
     'Operating System :: OS Independent'
 ]
 
+dependencies = [
+    'antlr4-python3-runtime'
+]
+
 [build-system]
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
