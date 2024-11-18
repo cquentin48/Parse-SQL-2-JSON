@@ -1,0 +1,50 @@
+[project]
+name = "Parser-SQL2JSON"
+version = "1"
+description = "Parse sql queries and returns the result into a JSON format"
+authors = [
+    { name = "Quentin C.", email="chapelquen@gmail.com" },
+]
+requires-python = ">=3.10"
+readme = "readme.md"
+classifiers = [
+    'Programming Language :: Python :: 3',
+    'Operating System :: OS Independent'
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+Homepage = "https://github.com/cquentin48/Parse-SQL-2-JSON"
+Issues = "https://github.com/cquentin48/Parse-SQL-2-JSON/issues"
+
+[tool.coverage.html]
+directory = "coverage_html_reports"
+
+[tool.coverage.path]
+source = [
+    "src/"
+]
+
+[tool.pylint.main]
+jobs=1
+output-format="colorized"
+failed-under=10
+
+[tool.pylint.report]
+reports = true
+score = true
+
+[tool.pylint.format]
+max-line-length = 100
+
+[tool.pylint.similarities]
+ignore-comments = true
+
+[project.optional-dependencies]
+dev = [
+    'pylint',
+    'coverage'
+]

@@ -1,0 +1,9 @@
+# Installation and build
+.venv/
+*.egg-info/
+build/
+__pycache__/
+
+# Coverage result
+htmlcov/
+.coverage
