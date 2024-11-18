@@ -22,6 +22,8 @@ jobs:
           sudo apt install -y build-essential
       - name: Install dependencies alongside the development ones
         run: sudo make dev_install
+      - name: Install dev dependencies for the coverage and the code writing errors
+        run: sudo pip install coverage pylint
       - name: Check for code writing errors
         run: sudo make lint
       - name: Launch unit test and displays the coverage result
