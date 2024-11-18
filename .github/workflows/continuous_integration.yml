@@ -1,6 +1,11 @@
-name: Python continuous integration
+name: Continuous Integration
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
+      - dev
+  pull_request: ~
 
 jobs:
   build:
