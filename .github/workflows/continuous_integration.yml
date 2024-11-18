@@ -29,4 +29,4 @@ jobs:
       - name: Launch unit test and displays the coverage result
         run: |
           sudo make test
-          sudo make coverage
+          sudo make sh_report
