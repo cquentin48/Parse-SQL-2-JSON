@@ -23,6 +23,6 @@ jobs:
       - name: Check for code writing errors
         run: make lint
       - name: Launch unit test and displays the coverage result
-        run:|
+        run: |
           make test
           make coverage
