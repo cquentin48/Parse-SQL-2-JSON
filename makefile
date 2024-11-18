@@ -5,7 +5,7 @@ lint: ## Check for code writing errors
 	pylint --rcfile=.pylintrc src tests
 
 test: ## Launch the unit test suite (could be used later for reports in HTML or Shell output)
-	coverage -m unittest discover tests
+	coverage run -m unittest discover tests
 
 html_report: ## Displays the result of the test command into an HTML page
 	coverage html
