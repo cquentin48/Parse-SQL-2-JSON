@@ -43,6 +43,9 @@ max-line-length = 100
 [tool.pylint.similarities]
 ignore-comments = true
 
+[tool.setuptools.packages.find]
+include = ['src*']
+
 [project.optional-dependencies]
 dev = [
     'pylint',
