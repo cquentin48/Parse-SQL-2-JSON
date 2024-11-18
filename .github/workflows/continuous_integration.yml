@@ -21,10 +21,10 @@ jobs:
           sudo apt update -y
           sudo apt install -y build-essential
       - name: Install dependencies alongside the development ones
-        run: make dev_install
+        run: sudo make dev_install
       - name: Check for code writing errors
-        run: make lint
+        run: sudo make lint
       - name: Launch unit test and displays the coverage result
         run: |
-          make test
-          make coverage
+          sudo make test
+          sudo make coverage
