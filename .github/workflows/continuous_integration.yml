@@ -12,12 +12,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Setup Python ${{ matrix.python-version}}
+      - name: Setup Python ${{ matrix.python-version }}
         uses: actions/setup-python@v5
         with:
           python:version: ${{ matrix.python_version }}
       - name: Install make tools
-        run: apt install -y build-essentials
+        run: sudo apt install -y build-essentials
       - name: Install dependencies alongside the development ones
         run: make dev_install
       - name: Check for code writing errors
