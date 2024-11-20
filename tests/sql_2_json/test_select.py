@@ -7,7 +7,7 @@ import unittest
 from src import SQL2JSON
 
 
-class TestSQL2JSON(unittest.TestCase):
+class TestSelect(unittest.TestCase):
     """
     SQL 2 JSON main module test case
     """

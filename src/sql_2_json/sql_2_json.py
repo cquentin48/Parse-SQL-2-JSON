@@ -18,6 +18,8 @@ from .SqlLexer import SqlLexer
 from .SqlListener import SqlListener
 from .SqlParser import SqlParser
 
+from src.sql_2_json.parser.exceptions import LexerError, ParseError
+
 class SQL2JSON:
     """
     SQL Parser main class
@@ -32,8 +34,11 @@ class SQL2JSON:
         :param query: SQL query
         """
         lexer = SqlLexer(InputStream(query))
+        lexer.addErrorListener(LexerError())
         stream = CommonTokenStream(lexer)
         parser = SqlParser(stream)
+        parser.removeErrorListeners()
+        parser.addErrorListener(ParseError())
 
         walker = ParseTreeWalker()
         walker.walk(self.listener, parser.whole_query())

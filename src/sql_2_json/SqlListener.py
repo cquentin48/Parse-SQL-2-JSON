@@ -6,8 +6,6 @@ else:
     from SqlParser import SqlParser
 
 # This class defines a complete listener for a parse tree produced by SqlParser.
-
-
 class SqlListener(ParseTreeListener):
     def __init__(self):
         """
@@ -21,31 +19,46 @@ class SqlListener(ParseTreeListener):
         self.table_names = []
         self.joins = {}
         self.join_type = ""
+        
+        # Conditions
+        self.conditions = []
 
     # Enter a parse tree produced by SqlParser#whole_query.
-    def enterWhole_query(self, ctx: SqlParser.Whole_queryContext):
+    def enterWhole_query(self, ctx:SqlParser.Whole_queryContext):
         ctx.query()
 
     # Exit a parse tree produced by SqlParser#whole_query.
-    def exitWhole_query(self, ctx: SqlParser.Whole_queryContext):
+    def exitWhole_query(self, ctx:SqlParser.Whole_queryContext):
         pass
+
 
     # Enter a parse tree produced by SqlParser#query.
-    def enterQuery(self, ctx: SqlParser.QueryContext):
+    def enterQuery(self, ctx:SqlParser.QueryContext):
         ctx.select_stmt()
         ctx.from_stmt()
+        ctx.where_stmt()
 
     # Exit a parse tree produced by SqlParser#query.
-    def exitQuery(self, ctx: SqlParser.QueryContext):
+    def exitQuery(self, ctx:SqlParser.QueryContext):
         pass
 
+
     # Enter a parse tree produced by SqlParser#select_stmt.
-    def enterSelect_stmt(self, ctx: SqlParser.Select_stmtContext):
+    def enterSelect_stmt(self, ctx:SqlParser.Select_stmtContext):
         ctx.table_column_name()
         ctx.every_columns()
 
     # Exit a parse tree produced by SqlParser#select_stmt.
-    def exitSelect_stmt(self, ctx: SqlParser.Select_stmtContext):
+    def exitSelect_stmt(self, ctx:SqlParser.Select_stmtContext):
+        pass
+
+
+    # Enter a parse tree produced by SqlParser#every_columns.
+    def enterEvery_columns(self, ctx:SqlParser.Every_columnsContext):
+        self.column_names.append('__everything')
+
+    # Exit a parse tree produced by SqlParser#every_columns.
+    def exitEvery_columns(self, ctx:SqlParser.Every_columnsContext):
         pass
 
     # Enter a parse tree produced by SqlParser#from_stmt.
@@ -139,13 +152,27 @@ class SqlListener(ParseTreeListener):
     def exitNatural_join_stmt(self, ctx: SqlParser.Natural_join_stmtContext):
         pass
 
-    # Enter a parse tree produced by SqlParser#every_columns.
-    def enterEvery_columns(self, ctx: SqlParser.Every_columnsContext):
-        self.column_names.append('__everything')
+    # Enter a parse tree produced by SqlParser#where_stmt.
+    def enterWhere_stmt(self, ctx:SqlParser.Where_stmtContext):
+        ctx.where_condition()
 
-    # Exit a parse tree produced by SqlParser#every_columns.
-    def exitEvery_columns(self, ctx: SqlParser.Every_columnsContext):
+    # Exit a parse tree produced by SqlParser#where_stmt.
+    def exitWhere_stmt(self, ctx:SqlParser.Where_stmtContext):
         pass
+
+
+    # Enter a parse tree produced by SqlParser#where_condition.
+    def enterWhere_condition(self, ctx:SqlParser.Where_conditionContext):
+        self.conditions.append({
+            'column_name':ctx.getChild(0).getText(),
+            'value':ctx.getChild(2).getText()
+        })
+        
+
+    # Exit a parse tree produced by SqlParser#where_condition.
+    def exitWhere_condition(self, ctx:SqlParser.Where_conditionContext):
+        pass
+
 
     # Enter a parse tree produced by SqlParser#table_column_name.
     def enterTable_column_name(self, ctx: SqlParser.Table_column_nameContext):

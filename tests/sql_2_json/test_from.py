@@ -7,7 +7,7 @@ import unittest
 from src import SQL2JSON
 
 
-class TestFROM(unittest.TestCase):
+class TestFrom(unittest.TestCase):
     """
     Test from parser unit test class
     """
