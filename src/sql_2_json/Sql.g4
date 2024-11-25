@@ -18,7 +18,14 @@ inner_join_eq : table_column_name SPACE* EQ table_column_name;
 natural_join_stmt: table_name SPACE* NATURAL_JOIN SPACE* table_name;
 
 where_stmt: WHERE SPACE* where_condition;
-where_condition: table_column_name EQ table_column_name;
+where_condition: table_column_name EQ obj_type;
+
+obj_type : (formatted_date | TEXT | NUMBER);
+
+formatted_date: SINGLE_QUOTATION_MARK date SINGLE_QUOTATION_MARK
+	| DOUBLE_QUOTATION_MARK date DOUBLE_QUOTATION_MARK;
+
+date: DIGIT+ SLASH DIGIT+ SLASH DIGIT+;
 
 NUMBER: [0-9]+ (POINT [0-9]+)*;
 
@@ -58,6 +65,7 @@ GREATER: '>';
 GEQ: '>=';
 LOWER: '<';
 LEQ: '<=';
+SLASH: '/';
 
 LETTER: [a-zA-Z];
 DIGIT: [0-9];
