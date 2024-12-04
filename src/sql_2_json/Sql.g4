@@ -18,11 +18,15 @@ inner_join_eq : table_column_name SPACE* EQ table_column_name;
 natural_join_stmt: table_name SPACE* NATURAL_JOIN SPACE* table_name;
 
 where_stmt: WHERE SPACE* where_condition;
-where_condition: where_simple_condition | where_between_condition | where_like_condition ;
+where_condition: where_simple_condition | where_between_condition | where_like_condition | where_function_condition;
 
 where_simple_condition: table_column_name eq_type obj_type;
 where_between_condition: table_column_name BETWEEN obj_type AND obj_type;
 where_like_condition: table_column_name LIKE TEXT | table_column_name NOT LIKE TEXT;
+where_function_condition: function_name OPAR argument_list CPAR;
+
+function_name: STRING POINT STRING | STRING;
+argument_list : (QUOTED_DATE | TEXT | NUMBER | table_column_name) COMMA argument_list | (QUOTED_DATE | TEXT | NUMBER | table_column_name);
 
 eq_type : EQ | GREATER | LOWER | GEQ | LEQ | DIFFERENT;
 obj_type : (QUOTED_DATE | TEXT | NUMBER);
@@ -84,8 +88,8 @@ LIKE: 'like' | 'LIKE';
 LETTER: [a-zA-Z];
 DIGIT: [0-9];
 TEXT:
-	SINGLE_QUOTATION_MARK (.~('"'))*? SINGLE_QUOTATION_MARK
+	SINGLE_QUOTATION_MARK (.~('\''))*? SINGLE_QUOTATION_MARK
 	| DOUBLE_QUOTATION_MARK (.~('"'))*? DOUBLE_QUOTATION_MARK;
 STRING: [a-zA-Z0-9_]+;
-
+FUNCTION_NAME : ([a-zA-Z0-9_.])+;
 SPACE: [ \t\r\n]+ -> skip;

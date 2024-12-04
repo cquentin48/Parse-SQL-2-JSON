@@ -215,6 +215,25 @@ class SqlListener(ParseTreeListener):
     def exitWhere_like_condition(self, ctx: SqlParser.Where_like_conditionContext):
         pass
 
+
+    # Enter a parse tree produced by SqlParser#where_function_condition.
+    def enterWhere_function_condition(self, ctx:SqlParser.Where_function_conditionContext):
+        pass
+
+    # Exit a parse tree produced by SqlParser#where_function_condition.
+    def exitWhere_function_condition(self, ctx:SqlParser.Where_function_conditionContext):
+        pass
+
+
+    # Enter a parse tree produced by SqlParser#argument_list.
+    def enterArgument_list(self, ctx:SqlParser.Argument_listContext):
+        pass
+
+    # Exit a parse tree produced by SqlParser#argument_list.
+    def exitArgument_list(self, ctx:SqlParser.Argument_listContext):
+        pass
+
+
     # Enter a parse tree produced by SqlParser#eq_type.
     def enterEq_type(self, ctx: SqlParser.Eq_typeContext):
         value = ''
