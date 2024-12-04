@@ -1,11 +1,13 @@
 # Generated from Sql.g4 by ANTLR 4.13.2
 from antlr4 import *
-if "." in __name__:
+if "." in __name__:  # pragma: no cover
     from .SqlParser import SqlParser
-else:
+else:  # pragma: no cover
     from SqlParser import SqlParser
 
 # This class defines a complete listener for a parse tree produced by SqlParser.
+
+
 class SqlListener(ParseTreeListener):
     def __init__(self):
         """
@@ -24,26 +26,25 @@ class SqlListener(ParseTreeListener):
         self.conditions = []
 
     # Enter a parse tree produced by SqlParser#whole_query.
-    def enterWhole_query(self, ctx:SqlParser.Whole_queryContext):
+    def enterWhole_query(self, ctx: SqlParser.Whole_queryContext):
         ctx.query()
 
     # Exit a parse tree produced by SqlParser#whole_query.
-    def exitWhole_query(self, ctx:SqlParser.Whole_queryContext):
+    def exitWhole_query(self, ctx: SqlParser.Whole_queryContext):
         pass
 
-
     # Enter a parse tree produced by SqlParser#query.
-    def enterQuery(self, ctx:SqlParser.QueryContext):
+    def enterQuery(self, ctx: SqlParser.QueryContext):
         ctx.select_stmt()
         ctx.from_stmt()
         ctx.where_stmt()
 
     # Exit a parse tree produced by SqlParser#query.
-    def exitQuery(self, ctx:SqlParser.QueryContext):
+    def exitQuery(self, ctx: SqlParser.QueryContext):
         pass
 
-
     # Enter a parse tree produced by SqlParser#select_stmt.
+
     def enterSelect_stmt(self, ctx: SqlParser.Select_stmtContext):
         ctx.table_column_name()
         ctx.every_columns()
@@ -156,24 +157,90 @@ class SqlListener(ParseTreeListener):
         ctx.where_condition()
 
     # Exit a parse tree produced by SqlParser#where_stmt.
-    def exitWhere_stmt(self, ctx:SqlParser.Where_stmtContext):
+    def exitWhere_stmt(self, ctx: SqlParser.Where_stmtContext):
         pass
-
 
     # Enter a parse tree produced by SqlParser#where_condition.
-    def enterWhere_condition(self, ctx:SqlParser.Where_conditionContext):
-        ctx.obj_type()
-
-        self.conditions.append({
-            'column_name':ctx.getChild(0).getText(),
-        })
+    def enterWhere_condition(self, ctx: SqlParser.Where_conditionContext):
+        ctx.where_simple_condition()
+        ctx.where_between_condition()
 
     # Exit a parse tree produced by SqlParser#where_condition.
-    def exitWhere_condition(self, ctx:SqlParser.Where_conditionContext):
+    def exitWhere_condition(self, ctx: SqlParser.Where_conditionContext):
         pass
 
+    # Enter a parse tree produced by SqlParser#where_simple_condition.
+    def enterWhere_simple_condition(self, ctx: SqlParser.Where_simple_conditionContext):
+        self.conditions.append({
+            'column_name': ctx.getChild(0).getText(),
+            'type': ctx.getChild(1).getText()
+        })
+        self.where_mode = 'simple'
+        ctx.eq_type()
+        ctx.obj_type()
+
+    # Exit a parse tree produced by SqlParser#where_simple_condition.
+    def exitWhere_simple_condition(self, ctx: SqlParser.Where_simple_conditionContext):
+        pass
+
+    # Enter a parse tree produced by SqlParser#where_between_condition.
+    def enterWhere_between_condition(self, ctx: SqlParser.Where_between_conditionContext):
+        self.conditions.append({
+            'column_name': ctx.getChild(0).getText(),
+            'type': 'between',
+            'values': []
+        })
+        self.where_mode = 'between'
+        ctx.obj_type()
+
+    # Exit a parse tree produced by SqlParser#where_between_condition.
+    def exitWhere_between_condition(self, ctx: SqlParser.Where_between_conditionContext):
+        pass
+
+    # Enter a parse tree produced by SqlParser#where_like_condition.
+    def enterWhere_like_condition(self, ctx: SqlParser.Where_like_conditionContext):
+        offset = 0
+        if ctx.getChild(1).getText().upper() == 'NOT':
+            equality_type = 'NOT_LIKE'
+            offset += 1
+        else:
+            equality_type = 'LIKE'
+        self.conditions.append({
+            'column_name': ctx.getChild(0).getText(),
+            'type': equality_type,
+            'value': eval(ctx.getChild(offset+2).getText())
+        })
+
+    # Exit a parse tree produced by SqlParser#where_like_condition.
+    def exitWhere_like_condition(self, ctx: SqlParser.Where_like_conditionContext):
+        pass
+
+    # Enter a parse tree produced by SqlParser#eq_type.
+    def enterEq_type(self, ctx: SqlParser.Eq_typeContext):
+        value = ''
+        match ctx.getChild(0).getText():
+            case '=':
+                value = 'EQUALITY'
+            case '<':
+                value = 'LOWER'
+            case '>':
+                value = 'HIGHER'
+            case '>=':
+                value = 'HEQ'
+            case '<=':
+                value = 'LEQ'
+            case '!=':
+                value = 'NOT_EQUAL'
+
+        last_column_index = len(self.conditions)-1
+        self.conditions[last_column_index]['type'] = value
+
+    # Exit a parse tree produced by SqlParser#eq_type.
+    def exitEq_type(self, ctx: SqlParser.Eq_typeContext):
+        pass
 
     # Enter a parse tree produced by SqlParser#obj_type.
+
     def enterObj_type(self, ctx: SqlParser.Obj_typeContext):
         value = ctx.getChild(0).getText()
         if value.isalnum():
@@ -181,12 +248,15 @@ class SqlListener(ParseTreeListener):
         else:
             value = value[1:-1]
         last_condition_index = len(self.conditions)-1
-        self.conditions[last_condition_index]['value'] = value
+        match self.where_mode:
+            case 'simple':
+                self.conditions[last_condition_index]['value'] = value
+            case 'between':
+                self.conditions[last_condition_index]['values'].append(value)
 
     # Exit a parse tree produced by SqlParser#obj_type.
-    def exitObj_type(self, ctx:SqlParser.Obj_typeContext):
+    def exitObj_type(self, ctx: SqlParser.Obj_typeContext):
         pass
-
 
     def enterTable_column_name(self, ctx: SqlParser.Table_column_nameContext):
         self.column_names.append(ctx.STRING().getText())
