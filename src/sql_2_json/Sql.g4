@@ -24,6 +24,7 @@ where_simple_condition: table_column_name eq_type obj_type;
 where_between_condition: table_column_name BETWEEN obj_type AND obj_type;
 where_like_condition: table_column_name LIKE TEXT | table_column_name NOT LIKE TEXT;
 where_function_condition: function_name OPAR argument_list CPAR;
+where_in_condition: table_column_name SPACE+ IN SPACE+ OPAR argument_list CPAR;
 
 function_name: STRING POINT STRING | STRING;
 argument_list : (QUOTED_DATE | TEXT | NUMBER | table_column_name) COMMA argument_list | (QUOTED_DATE | TEXT | NUMBER | table_column_name);

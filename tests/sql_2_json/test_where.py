@@ -175,19 +175,19 @@ class TestWhere(unittest.TestCase):
         # Asserts
         self.assertEqual(test_object.listener.conditions, expected_ouput)
 
-    def test_where_function_equality(self):
+    def test_where_in_equality(self):
         """
         Test if the parser can identify the function equality (the condition is set to true here)
         """
 
         # Given
         test_object = SQL2JSON()
-        example_query = "select * from test where toto('b');"
+        example_query = "select * from test where col in (1,2,3,4);"
 
         # Acts
         test_object.parse_request(example_query)
         expected_ouput = [
-            {'column_name': 't1', 'type': 'FUNCTION', 'function_name': 'toto', 'arguments': ['b']}]
+            {'type': 'FUNCTION', 'function_name': 'toto', 'arguments': ['bt']}]
 
         # Asserts
         self.assertEqual(test_object.listener.conditions, expected_ouput)

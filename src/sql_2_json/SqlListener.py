@@ -218,6 +218,11 @@ class SqlListener(ParseTreeListener):
 
     # Enter a parse tree produced by SqlParser#where_function_condition.
     def enterWhere_function_condition(self, ctx:SqlParser.Where_function_conditionContext):
+        self.conditions.append({
+            'function_name':ctx.function_name().getText(),
+            'type':'FUNCTION'
+        })
+        ctx.argument_list()
         pass
 
     # Exit a parse tree produced by SqlParser#where_function_condition.
@@ -225,9 +230,32 @@ class SqlListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by SqlParser#where_in_condition.
+    def enterWhere_in_condition(self, ctx:SqlParser.Where_in_conditionContext):
+        pass
+
+    # Exit a parse tree produced by SqlParser#where_in_condition.
+    def exitWhere_in_condition(self, ctx:SqlParser.Where_in_conditionContext):
+        pass
+
+
     # Enter a parse tree produced by SqlParser#argument_list.
     def enterArgument_list(self, ctx:SqlParser.Argument_listContext):
-        pass
+        last_condition_index = len(self.conditions)-1
+        if last_condition_index < 0:
+            raise ValueError("Must create a condition before appending"+
+                             " the argument list of a function into it!")
+        
+        if 'conditions' not in self.conditions[last_condition_index]:
+            self.conditions[last_condition_index]["arguments"] = []
+        arguments = self.conditions[last_condition_index]["arguments"]
+        value = ctx.getChild(0).getText()
+        if value.isalnum():
+            value = int(value)
+        else:
+            value = value[1:-1]
+        arguments.append(value)
+        ctx.argument_list()
 
     # Exit a parse tree produced by SqlParser#argument_list.
     def exitArgument_list(self, ctx:SqlParser.Argument_listContext):
