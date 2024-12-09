@@ -160,6 +160,15 @@ class SqlListener(ParseTreeListener):
     def exitWhere_stmt(self, ctx: SqlParser.Where_stmtContext):
         pass
 
+
+    # Enter a parse tree produced by SqlParser#where_and_condition.
+    def enterWhere_and_condition(self, ctx:SqlParser.Where_and_conditionContext):
+        pass
+
+    # Exit a parse tree produced by SqlParser#where_and_condition.
+    def exitWhere_and_condition(self, ctx:SqlParser.Where_and_conditionContext):
+        pass
+
     # Enter a parse tree produced by SqlParser#where_condition.
     def enterWhere_condition(self, ctx: SqlParser.Where_conditionContext):
         ctx.where_simple_condition()
@@ -232,7 +241,11 @@ class SqlListener(ParseTreeListener):
 
     # Enter a parse tree produced by SqlParser#where_in_condition.
     def enterWhere_in_condition(self, ctx:SqlParser.Where_in_conditionContext):
-        pass
+        self.conditions.append({
+            'type':'IN',
+            'col_name': ctx.getChild(0).getText()
+        })
+        ctx.argument_list()
 
     # Exit a parse tree produced by SqlParser#where_in_condition.
     def exitWhere_in_condition(self, ctx:SqlParser.Where_in_conditionContext):
@@ -246,15 +259,15 @@ class SqlListener(ParseTreeListener):
             raise ValueError("Must create a condition before appending"+
                              " the argument list of a function into it!")
         
-        if 'conditions' not in self.conditions[last_condition_index]:
-            self.conditions[last_condition_index]["arguments"] = []
-        arguments = self.conditions[last_condition_index]["arguments"]
+        if 'value_list' not in self.conditions[last_condition_index]:
+            self.conditions[last_condition_index]["value_list"] = []
         value = ctx.getChild(0).getText()
         if value.isalnum():
             value = int(value)
         else:
             value = value[1:-1]
-        arguments.append(value)
+        self.conditions[last_condition_index]["value_list"].append(value)
+        
         ctx.argument_list()
 
     # Exit a parse tree produced by SqlParser#argument_list.
