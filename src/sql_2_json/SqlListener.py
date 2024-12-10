@@ -178,6 +178,7 @@ class SqlListener(ParseTreeListener):
 
     # Enter a parse tree produced by SqlParser#where_condition.
     def enterWhere_condition(self, ctx: SqlParser.Where_conditionContext):
+        ctx.where_and_condition()
         ctx.where_simple_condition()
         ctx.where_between_condition()
 
@@ -316,7 +317,6 @@ class SqlListener(ParseTreeListener):
         pass
 
     # Enter a parse tree produced by SqlParser#obj_type.
-
     def enterObj_type(self, ctx: SqlParser.Obj_typeContext):
         value = ctx.getChild(0).getText()
         if value.isalnum():

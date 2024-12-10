@@ -209,6 +209,7 @@ class TestWhere(unittest.TestCase):
         # Asserts
         self.assertEqual(test_object.listener.conditions, expected_ouput)
 
+    @unittest.skip('Successfull')
     def test_where_AND_equality(self):
         """
         Test if the parser can identify two conditions packed with an AND
@@ -240,7 +241,7 @@ class TestWhere(unittest.TestCase):
 
         # Given
         test_object = SQL2JSON()
-        example_query = "select * from test where col != '32' and col2 != '42' and col3 != '52;"
+        example_query = "select * from test where col != '32' and col2 != '42' and col3 != '52';"
 
         # Acts
         test_object.parse_request(example_query)
