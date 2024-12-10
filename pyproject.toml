@@ -53,5 +53,6 @@ include = ['src*']
 [project.optional-dependencies]
 dev = [
     'pylint',
-    'coverage'
+    'coverage',
+    'debugpy'
 ]

@@ -7,3 +7,5 @@ __pycache__/
 # Coverage result
 coverage_html_reports/
 .coverage
+
+.vscode

@@ -24,6 +24,7 @@ class SqlListener(ParseTreeListener):
 
         # Conditions
         self.conditions = []
+        self.where_mode = ""
 
     # Enter a parse tree produced by SqlParser#whole_query.
     def enterWhole_query(self, ctx: SqlParser.Whole_queryContext):
@@ -163,11 +164,17 @@ class SqlListener(ParseTreeListener):
 
     # Enter a parse tree produced by SqlParser#where_and_condition.
     def enterWhere_and_condition(self, ctx:SqlParser.Where_and_conditionContext):
+        self.conditions.append({
+            'type':'AND',
+            'conditions':[]
+        })
+        self.where_mode='AND'
+        ctx.where_condition()
         pass
 
     # Exit a parse tree produced by SqlParser#where_and_condition.
     def exitWhere_and_condition(self, ctx:SqlParser.Where_and_conditionContext):
-        pass
+        self.where_mode='SIMPLE'
 
     # Enter a parse tree produced by SqlParser#where_condition.
     def enterWhere_condition(self, ctx: SqlParser.Where_conditionContext):
@@ -180,11 +187,16 @@ class SqlListener(ParseTreeListener):
 
     # Enter a parse tree produced by SqlParser#where_simple_condition.
     def enterWhere_simple_condition(self, ctx: SqlParser.Where_simple_conditionContext):
-        self.conditions.append({
+        new_condition = {
             'column_name': ctx.getChild(0).getText(),
             'type': ctx.getChild(1).getText()
-        })
-        self.where_mode = 'simple'
+        }
+        if self.where_mode == 'AND':
+            last_condition_index = len(self.conditions)-1
+            self.conditions[last_condition_index]['conditions'].append(new_condition)
+        else:
+            self.where_mode = 'SIMPLE'
+            self.conditions.append(new_condition)
         ctx.eq_type()
         ctx.obj_type()
 
@@ -292,8 +304,12 @@ class SqlListener(ParseTreeListener):
             case '!=':
                 value = 'NOT_EQUAL'
 
-        last_column_index = len(self.conditions)-1
-        self.conditions[last_column_index]['type'] = value
+        last_column_index = -1
+        if self.where_mode == 'SIMPLE':
+            self.conditions[last_column_index]['type'] = value
+        else:
+            self.conditions[last_column_index]['conditions'][-1]['type'] =\
+                value
 
     # Exit a parse tree produced by SqlParser#eq_type.
     def exitEq_type(self, ctx: SqlParser.Eq_typeContext):
@@ -309,10 +325,12 @@ class SqlListener(ParseTreeListener):
             value = value[1:-1]
         last_condition_index = len(self.conditions)-1
         match self.where_mode:
-            case 'simple':
+            case 'SIMPLE':
                 self.conditions[last_condition_index]['value'] = value
             case 'between':
                 self.conditions[last_condition_index]['values'].append(value)
+            case 'AND':
+                self.conditions[-1]['conditions'][-1]['value'] = value
 
     # Exit a parse tree produced by SqlParser#obj_type.
     def exitObj_type(self, ctx: SqlParser.Obj_typeContext):
