@@ -25,6 +25,8 @@ class SqlListener(ParseTreeListener):
         # Conditions
         self.conditions = []
         self.where_mode = ""
+        self.where_and_level = 0
+        self.sub_where_and_level = 0
 
     # Enter a parse tree produced by SqlParser#whole_query.
     def enterWhole_query(self, ctx: SqlParser.Whole_queryContext):
@@ -161,20 +163,26 @@ class SqlListener(ParseTreeListener):
     def exitWhere_stmt(self, ctx: SqlParser.Where_stmtContext):
         pass
 
-
     # Enter a parse tree produced by SqlParser#where_and_condition.
-    def enterWhere_and_condition(self, ctx:SqlParser.Where_and_conditionContext):
-        self.conditions.append({
-            'type':'AND',
-            'conditions':[]
-        })
-        self.where_mode='AND'
+    def enterWhere_and_condition(self, ctx: SqlParser.Where_and_conditionContext):
+        if ctx.getChild(0).getText() == '(':
+            self.where_and_level += 1
+            self.sub_where_and_level = 0
+        else:
+            self.sub_where_and_level += 1
+        if self.where_and_level >= len(self.conditions):
+            self.conditions.append({
+                'type': 'AND',
+                'conditions': []
+            })
+            self.where_mode = 'AND'
         ctx.where_condition()
-        pass
 
     # Exit a parse tree produced by SqlParser#where_and_condition.
-    def exitWhere_and_condition(self, ctx:SqlParser.Where_and_conditionContext):
-        self.where_mode='SIMPLE'
+    def exitWhere_and_condition(self, ctx: SqlParser.Where_and_conditionContext):
+        self.where_and_level = max(self.where_and_level-1, 0)
+        self.where_mode = 'SIMPLE'
+
 
     # Enter a parse tree produced by SqlParser#where_condition.
     def enterWhere_condition(self, ctx: SqlParser.Where_conditionContext):
@@ -192,9 +200,10 @@ class SqlListener(ParseTreeListener):
             'column_name': ctx.getChild(0).getText(),
             'type': ctx.getChild(1).getText()
         }
-        if self.where_mode == 'AND':
+        if self.where_mode == 'AND' or self.where_mode == 'OR':
             last_condition_index = len(self.conditions)-1
-            self.conditions[last_condition_index]['conditions'].append(new_condition)
+            self.conditions[last_condition_index]['conditions'].append(
+                new_condition)
         else:
             self.where_mode = 'SIMPLE'
             self.conditions.append(new_condition)
@@ -237,41 +246,38 @@ class SqlListener(ParseTreeListener):
     def exitWhere_like_condition(self, ctx: SqlParser.Where_like_conditionContext):
         pass
 
-
     # Enter a parse tree produced by SqlParser#where_function_condition.
-    def enterWhere_function_condition(self, ctx:SqlParser.Where_function_conditionContext):
+    def enterWhere_function_condition(self, ctx: SqlParser.Where_function_conditionContext):
         self.conditions.append({
-            'function_name':ctx.function_name().getText(),
-            'type':'FUNCTION'
+            'function_name': ctx.function_name().getText(),
+            'type': 'FUNCTION'
         })
         ctx.argument_list()
         pass
 
     # Exit a parse tree produced by SqlParser#where_function_condition.
-    def exitWhere_function_condition(self, ctx:SqlParser.Where_function_conditionContext):
+    def exitWhere_function_condition(self, ctx: SqlParser.Where_function_conditionContext):
         pass
 
-
     # Enter a parse tree produced by SqlParser#where_in_condition.
-    def enterWhere_in_condition(self, ctx:SqlParser.Where_in_conditionContext):
+    def enterWhere_in_condition(self, ctx: SqlParser.Where_in_conditionContext):
         self.conditions.append({
-            'type':'IN',
+            'type': 'IN',
             'col_name': ctx.getChild(0).getText()
         })
         ctx.argument_list()
 
     # Exit a parse tree produced by SqlParser#where_in_condition.
-    def exitWhere_in_condition(self, ctx:SqlParser.Where_in_conditionContext):
+    def exitWhere_in_condition(self, ctx: SqlParser.Where_in_conditionContext):
         pass
 
-
     # Enter a parse tree produced by SqlParser#argument_list.
-    def enterArgument_list(self, ctx:SqlParser.Argument_listContext):
+    def enterArgument_list(self, ctx: SqlParser.Argument_listContext):
         last_condition_index = len(self.conditions)-1
         if last_condition_index < 0:
-            raise ValueError("Must create a condition before appending"+
+            raise ValueError("Must create a condition before appending" +
                              " the argument list of a function into it!")
-        
+
         if 'value_list' not in self.conditions[last_condition_index]:
             self.conditions[last_condition_index]["value_list"] = []
         value = ctx.getChild(0).getText()
@@ -280,15 +286,15 @@ class SqlListener(ParseTreeListener):
         else:
             value = value[1:-1]
         self.conditions[last_condition_index]["value_list"].append(value)
-        
+
         ctx.argument_list()
 
     # Exit a parse tree produced by SqlParser#argument_list.
-    def exitArgument_list(self, ctx:SqlParser.Argument_listContext):
+    def exitArgument_list(self, ctx: SqlParser.Argument_listContext):
         pass
 
-
     # Enter a parse tree produced by SqlParser#eq_type.
+
     def enterEq_type(self, ctx: SqlParser.Eq_typeContext):
         value = ''
         match ctx.getChild(0).getText():
@@ -329,7 +335,7 @@ class SqlListener(ParseTreeListener):
                 self.conditions[last_condition_index]['value'] = value
             case 'between':
                 self.conditions[last_condition_index]['values'].append(value)
-            case 'AND':
+            case 'AND'|'OR':
                 self.conditions[-1]['conditions'][-1]['value'] = value
 
     # Exit a parse tree produced by SqlParser#obj_type.

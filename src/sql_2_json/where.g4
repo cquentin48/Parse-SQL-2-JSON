@@ -7,6 +7,9 @@ where_stmt:
 where_and_condition:
 	OPAR where_condition SPACE* AND SPACE* (where_condition | where_and_condition) CPAR
 	| where_condition SPACE* AND SPACE* (where_condition | where_and_condition);
+where_or_condition:
+	OPAR where_condition SPACE* AND SPACE* (where_condition | where_or_condition) CPAR
+	| where_condition SPACE* AND SPACE* (where_condition | where_or_condition);
 
 where_condition:
 	where_simple_condition

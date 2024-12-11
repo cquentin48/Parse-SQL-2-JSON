@@ -209,7 +209,6 @@ class TestWhere(unittest.TestCase):
         # Asserts
         self.assertEqual(test_object.listener.conditions, expected_ouput)
 
-    @unittest.skip('Successfull')
     def test_where_AND_equality(self):
         """
         Test if the parser can identify two conditions packed with an AND
