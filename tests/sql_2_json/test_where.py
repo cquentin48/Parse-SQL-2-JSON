@@ -235,12 +235,12 @@ class TestWhere(unittest.TestCase):
 
     def test_where_AND_equality_three_operators(self):
         """
-        Test if the parser can identify two conditions packed with an AND
+        Test if the parser can identify two conditions packed with an OR
         """
 
         # Given
         test_object = SQL2JSON()
-        example_query = "select * from test where col != '32' and col2 != '42' and col3 != '52';"
+        example_query = "select * from test where col != '32' and col2 != '42' or col3 != '52';"
 
         # Acts
         test_object.parse_request(example_query)

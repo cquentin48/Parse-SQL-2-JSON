@@ -3,13 +3,14 @@ grammar where;
 import tokens;
 
 where_stmt:
-	WHERE SPACE* (where_condition | where_and_condition);
-where_and_condition:
-	OPAR where_condition SPACE* AND SPACE* (where_condition | where_and_condition) CPAR
-	| where_condition SPACE* AND SPACE* (where_condition | where_and_condition);
-where_or_condition:
-	OPAR where_condition SPACE* AND SPACE* (where_condition | where_or_condition) CPAR
-	| where_condition SPACE* AND SPACE* (where_condition | where_or_condition);
+	WHERE SPACE* (where_condition | where_and_or_condition);
+where_and_or_condition:
+	where_and_or_condition and_or_operators where_and_or_condition
+	| where_and_or_condition and_or_operators where_condition
+	| where_condition and_or_operators where_and_or_condition
+	| where_condition and_or_operators where_condition;
+
+and_or_operators : AND | OR;
 
 where_condition:
 	where_simple_condition

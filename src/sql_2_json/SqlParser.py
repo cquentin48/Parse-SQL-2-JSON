@@ -10,126 +10,120 @@ else:
 
 def serializedATN():
     return [
-        4,1,40,333,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,41,320,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
         2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,20,
-        7,20,2,21,7,21,2,22,7,22,2,23,7,23,1,0,1,0,5,0,51,8,0,10,0,12,0,
-        54,9,0,1,0,1,0,1,1,1,1,5,1,60,8,1,10,1,12,1,63,9,1,1,1,1,1,5,1,67,
-        8,1,10,1,12,1,70,9,1,1,1,1,1,5,1,74,8,1,10,1,12,1,77,9,1,1,1,1,1,
-        5,1,81,8,1,10,1,12,1,84,9,1,1,1,3,1,87,8,1,1,2,1,2,1,2,5,2,92,8,
-        2,10,2,12,2,95,9,2,5,2,97,8,2,10,2,12,2,100,9,2,1,2,1,2,3,2,104,
-        8,2,1,3,1,3,1,4,1,4,1,4,1,4,1,4,1,4,1,4,3,4,115,8,4,1,5,1,5,1,5,
-        1,5,1,5,1,5,1,5,3,5,124,8,5,1,6,1,6,1,6,3,6,129,8,6,1,7,1,7,1,7,
-        5,7,134,8,7,10,7,12,7,137,9,7,5,7,139,8,7,10,7,12,7,142,9,7,1,7,
-        1,7,1,8,1,8,5,8,148,8,8,10,8,12,8,151,9,8,1,8,1,8,5,8,155,8,8,10,
-        8,12,8,158,9,8,1,8,1,8,5,8,162,8,8,10,8,12,8,165,9,8,1,8,1,8,5,8,
-        169,8,8,10,8,12,8,172,9,8,1,8,1,8,1,9,1,9,1,10,1,10,5,10,180,8,10,
-        10,10,12,10,183,9,10,1,10,1,10,1,10,1,11,1,11,5,11,190,8,11,10,11,
-        12,11,193,9,11,1,11,1,11,5,11,197,8,11,10,11,12,11,200,9,11,1,11,
-        1,11,1,12,1,12,5,12,206,8,12,10,12,12,12,209,9,12,1,12,1,12,3,12,
-        213,8,12,1,13,1,13,1,13,5,13,218,8,13,10,13,12,13,221,9,13,1,13,
-        1,13,5,13,225,8,13,10,13,12,13,228,9,13,1,13,1,13,3,13,232,8,13,
-        1,13,1,13,1,13,1,13,5,13,238,8,13,10,13,12,13,241,9,13,1,13,1,13,
-        5,13,245,8,13,10,13,12,13,248,9,13,1,13,1,13,3,13,252,8,13,3,13,
-        254,8,13,1,14,1,14,1,14,1,14,1,14,3,14,261,8,14,1,15,1,15,1,15,1,
-        15,1,16,1,16,1,16,1,16,1,16,1,16,1,17,1,17,1,17,1,17,1,17,1,17,1,
-        17,1,17,1,17,3,17,282,8,17,1,18,1,18,1,18,1,18,1,18,1,19,1,19,5,
-        19,291,8,19,10,19,12,19,294,9,19,1,19,1,19,5,19,298,8,19,10,19,12,
-        19,301,9,19,1,19,1,19,1,19,1,19,1,20,1,20,1,20,1,20,3,20,311,8,20,
-        1,21,1,21,1,21,1,21,3,21,317,8,21,1,21,1,21,1,21,1,21,1,21,1,21,
-        3,21,325,8,21,3,21,327,8,21,1,22,1,22,1,23,1,23,1,23,0,0,24,0,2,
-        4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,0,
-        3,2,0,12,14,16,16,2,0,10,11,25,28,3,0,1,1,19,19,37,37,356,0,48,1,
-        0,0,0,2,57,1,0,0,0,4,103,1,0,0,0,6,105,1,0,0,0,8,114,1,0,0,0,10,
-        123,1,0,0,0,12,128,1,0,0,0,14,140,1,0,0,0,16,145,1,0,0,0,18,175,
-        1,0,0,0,20,177,1,0,0,0,22,187,1,0,0,0,24,203,1,0,0,0,26,253,1,0,
-        0,0,28,260,1,0,0,0,30,262,1,0,0,0,32,266,1,0,0,0,34,281,1,0,0,0,
-        36,283,1,0,0,0,38,288,1,0,0,0,40,310,1,0,0,0,42,326,1,0,0,0,44,328,
-        1,0,0,0,46,330,1,0,0,0,48,52,3,2,1,0,49,51,5,40,0,0,50,49,1,0,0,
-        0,51,54,1,0,0,0,52,50,1,0,0,0,52,53,1,0,0,0,53,55,1,0,0,0,54,52,
-        1,0,0,0,55,56,5,22,0,0,56,1,1,0,0,0,57,61,5,3,0,0,58,60,5,40,0,0,
-        59,58,1,0,0,0,60,63,1,0,0,0,61,59,1,0,0,0,61,62,1,0,0,0,62,64,1,
-        0,0,0,63,61,1,0,0,0,64,68,3,4,2,0,65,67,5,40,0,0,66,65,1,0,0,0,67,
-        70,1,0,0,0,68,66,1,0,0,0,68,69,1,0,0,0,69,71,1,0,0,0,70,68,1,0,0,
-        0,71,75,5,4,0,0,72,74,5,40,0,0,73,72,1,0,0,0,74,77,1,0,0,0,75,73,
-        1,0,0,0,75,76,1,0,0,0,76,78,1,0,0,0,77,75,1,0,0,0,78,82,3,12,6,0,
-        79,81,5,40,0,0,80,79,1,0,0,0,81,84,1,0,0,0,82,80,1,0,0,0,82,83,1,
-        0,0,0,83,86,1,0,0,0,84,82,1,0,0,0,85,87,3,24,12,0,86,85,1,0,0,0,
-        86,87,1,0,0,0,87,3,1,0,0,0,88,89,3,8,4,0,89,93,5,21,0,0,90,92,5,
-        40,0,0,91,90,1,0,0,0,92,95,1,0,0,0,93,91,1,0,0,0,93,94,1,0,0,0,94,
-        97,1,0,0,0,95,93,1,0,0,0,96,88,1,0,0,0,97,100,1,0,0,0,98,96,1,0,
-        0,0,98,99,1,0,0,0,99,101,1,0,0,0,100,98,1,0,0,0,101,104,3,8,4,0,
-        102,104,3,6,3,0,103,98,1,0,0,0,103,102,1,0,0,0,104,5,1,0,0,0,105,
-        106,5,24,0,0,106,7,1,0,0,0,107,115,5,38,0,0,108,109,5,17,0,0,109,
-        110,5,38,0,0,110,115,5,17,0,0,111,112,5,18,0,0,112,113,5,38,0,0,
-        113,115,5,18,0,0,114,107,1,0,0,0,114,108,1,0,0,0,114,111,1,0,0,0,
-        115,9,1,0,0,0,116,124,5,38,0,0,117,118,5,17,0,0,118,119,5,38,0,0,
-        119,124,5,17,0,0,120,121,5,18,0,0,121,122,5,38,0,0,122,124,5,18,
-        0,0,123,116,1,0,0,0,123,117,1,0,0,0,123,120,1,0,0,0,124,11,1,0,0,
-        0,125,129,3,14,7,0,126,129,3,16,8,0,127,129,3,22,11,0,128,125,1,
-        0,0,0,128,126,1,0,0,0,128,127,1,0,0,0,129,13,1,0,0,0,130,131,3,10,
-        5,0,131,135,5,21,0,0,132,134,5,40,0,0,133,132,1,0,0,0,134,137,1,
-        0,0,0,135,133,1,0,0,0,135,136,1,0,0,0,136,139,1,0,0,0,137,135,1,
-        0,0,0,138,130,1,0,0,0,139,142,1,0,0,0,140,138,1,0,0,0,140,141,1,
-        0,0,0,141,143,1,0,0,0,142,140,1,0,0,0,143,144,3,10,5,0,144,15,1,
-        0,0,0,145,149,3,10,5,0,146,148,5,40,0,0,147,146,1,0,0,0,148,151,
-        1,0,0,0,149,147,1,0,0,0,149,150,1,0,0,0,150,152,1,0,0,0,151,149,
-        1,0,0,0,152,156,3,18,9,0,153,155,5,40,0,0,154,153,1,0,0,0,155,158,
-        1,0,0,0,156,154,1,0,0,0,156,157,1,0,0,0,157,159,1,0,0,0,158,156,
-        1,0,0,0,159,163,3,10,5,0,160,162,5,40,0,0,161,160,1,0,0,0,162,165,
-        1,0,0,0,163,161,1,0,0,0,163,164,1,0,0,0,164,166,1,0,0,0,165,163,
-        1,0,0,0,166,170,5,7,0,0,167,169,5,40,0,0,168,167,1,0,0,0,169,172,
-        1,0,0,0,170,168,1,0,0,0,170,171,1,0,0,0,171,173,1,0,0,0,172,170,
-        1,0,0,0,173,174,3,20,10,0,174,17,1,0,0,0,175,176,7,0,0,0,176,19,
-        1,0,0,0,177,181,3,8,4,0,178,180,5,40,0,0,179,178,1,0,0,0,180,183,
-        1,0,0,0,181,179,1,0,0,0,181,182,1,0,0,0,182,184,1,0,0,0,183,181,
-        1,0,0,0,184,185,5,10,0,0,185,186,3,8,4,0,186,21,1,0,0,0,187,191,
-        3,10,5,0,188,190,5,40,0,0,189,188,1,0,0,0,190,193,1,0,0,0,191,189,
-        1,0,0,0,191,192,1,0,0,0,192,194,1,0,0,0,193,191,1,0,0,0,194,198,
-        5,15,0,0,195,197,5,40,0,0,196,195,1,0,0,0,197,200,1,0,0,0,198,196,
-        1,0,0,0,198,199,1,0,0,0,199,201,1,0,0,0,200,198,1,0,0,0,201,202,
-        3,10,5,0,202,23,1,0,0,0,203,207,5,5,0,0,204,206,5,40,0,0,205,204,
-        1,0,0,0,206,209,1,0,0,0,207,205,1,0,0,0,207,208,1,0,0,0,208,212,
-        1,0,0,0,209,207,1,0,0,0,210,213,3,28,14,0,211,213,3,26,13,0,212,
-        210,1,0,0,0,212,211,1,0,0,0,213,25,1,0,0,0,214,215,5,30,0,0,215,
-        219,3,28,14,0,216,218,5,40,0,0,217,216,1,0,0,0,218,221,1,0,0,0,219,
-        217,1,0,0,0,219,220,1,0,0,0,220,222,1,0,0,0,221,219,1,0,0,0,222,
-        226,5,33,0,0,223,225,5,40,0,0,224,223,1,0,0,0,225,228,1,0,0,0,226,
-        224,1,0,0,0,226,227,1,0,0,0,227,231,1,0,0,0,228,226,1,0,0,0,229,
-        232,3,28,14,0,230,232,3,26,13,0,231,229,1,0,0,0,231,230,1,0,0,0,
-        232,233,1,0,0,0,233,234,5,31,0,0,234,254,1,0,0,0,235,239,3,28,14,
-        0,236,238,5,40,0,0,237,236,1,0,0,0,238,241,1,0,0,0,239,237,1,0,0,
-        0,239,240,1,0,0,0,240,242,1,0,0,0,241,239,1,0,0,0,242,246,5,33,0,
-        0,243,245,5,40,0,0,244,243,1,0,0,0,245,248,1,0,0,0,246,244,1,0,0,
-        0,246,247,1,0,0,0,247,251,1,0,0,0,248,246,1,0,0,0,249,252,3,28,14,
-        0,250,252,3,26,13,0,251,249,1,0,0,0,251,250,1,0,0,0,252,254,1,0,
-        0,0,253,214,1,0,0,0,253,235,1,0,0,0,254,27,1,0,0,0,255,261,3,30,
-        15,0,256,261,3,32,16,0,257,261,3,34,17,0,258,261,3,36,18,0,259,261,
-        3,38,19,0,260,255,1,0,0,0,260,256,1,0,0,0,260,257,1,0,0,0,260,258,
-        1,0,0,0,260,259,1,0,0,0,261,29,1,0,0,0,262,263,3,8,4,0,263,264,3,
-        44,22,0,264,265,3,46,23,0,265,31,1,0,0,0,266,267,3,8,4,0,267,268,
-        5,32,0,0,268,269,3,46,23,0,269,270,5,33,0,0,270,271,3,46,23,0,271,
-        33,1,0,0,0,272,273,3,8,4,0,273,274,5,34,0,0,274,275,5,37,0,0,275,
-        282,1,0,0,0,276,277,3,8,4,0,277,278,5,8,0,0,278,279,5,34,0,0,279,
-        280,5,37,0,0,280,282,1,0,0,0,281,272,1,0,0,0,281,276,1,0,0,0,282,
-        35,1,0,0,0,283,284,3,40,20,0,284,285,5,30,0,0,285,286,3,42,21,0,
-        286,287,5,31,0,0,287,37,1,0,0,0,288,292,3,8,4,0,289,291,5,40,0,0,
-        290,289,1,0,0,0,291,294,1,0,0,0,292,290,1,0,0,0,292,293,1,0,0,0,
-        293,295,1,0,0,0,294,292,1,0,0,0,295,299,5,6,0,0,296,298,5,40,0,0,
-        297,296,1,0,0,0,298,301,1,0,0,0,299,297,1,0,0,0,299,300,1,0,0,0,
-        300,302,1,0,0,0,301,299,1,0,0,0,302,303,5,30,0,0,303,304,3,42,21,
-        0,304,305,5,31,0,0,305,39,1,0,0,0,306,307,5,38,0,0,307,308,5,23,
-        0,0,308,311,5,38,0,0,309,311,5,38,0,0,310,306,1,0,0,0,310,309,1,
-        0,0,0,311,41,1,0,0,0,312,317,5,1,0,0,313,317,5,37,0,0,314,317,5,
-        19,0,0,315,317,3,8,4,0,316,312,1,0,0,0,316,313,1,0,0,0,316,314,1,
-        0,0,0,316,315,1,0,0,0,317,318,1,0,0,0,318,319,5,21,0,0,319,327,3,
-        42,21,0,320,325,5,1,0,0,321,325,5,37,0,0,322,325,5,19,0,0,323,325,
-        3,8,4,0,324,320,1,0,0,0,324,321,1,0,0,0,324,322,1,0,0,0,324,323,
-        1,0,0,0,325,327,1,0,0,0,326,316,1,0,0,0,326,324,1,0,0,0,327,43,1,
-        0,0,0,328,329,7,1,0,0,329,45,1,0,0,0,330,331,7,2,0,0,331,47,1,0,
-        0,0,38,52,61,68,75,82,86,93,98,103,114,123,128,135,140,149,156,163,
-        170,181,191,198,207,212,219,226,231,239,246,251,253,260,281,292,
-        299,310,316,324,326
+        7,20,2,21,7,21,2,22,7,22,2,23,7,23,2,24,7,24,1,0,1,0,5,0,53,8,0,
+        10,0,12,0,56,9,0,1,0,1,0,1,1,1,1,5,1,62,8,1,10,1,12,1,65,9,1,1,1,
+        1,1,5,1,69,8,1,10,1,12,1,72,9,1,1,1,1,1,5,1,76,8,1,10,1,12,1,79,
+        9,1,1,1,1,1,5,1,83,8,1,10,1,12,1,86,9,1,1,1,3,1,89,8,1,1,2,1,2,1,
+        2,5,2,94,8,2,10,2,12,2,97,9,2,5,2,99,8,2,10,2,12,2,102,9,2,1,2,1,
+        2,3,2,106,8,2,1,3,1,3,1,4,1,4,1,4,1,4,1,4,1,4,1,4,3,4,117,8,4,1,
+        5,1,5,1,5,1,5,1,5,1,5,1,5,3,5,126,8,5,1,6,1,6,1,6,3,6,131,8,6,1,
+        7,1,7,1,7,5,7,136,8,7,10,7,12,7,139,9,7,5,7,141,8,7,10,7,12,7,144,
+        9,7,1,7,1,7,1,8,1,8,5,8,150,8,8,10,8,12,8,153,9,8,1,8,1,8,5,8,157,
+        8,8,10,8,12,8,160,9,8,1,8,1,8,5,8,164,8,8,10,8,12,8,167,9,8,1,8,
+        1,8,5,8,171,8,8,10,8,12,8,174,9,8,1,8,1,8,1,9,1,9,1,10,1,10,5,10,
+        182,8,10,10,10,12,10,185,9,10,1,10,1,10,1,10,1,11,1,11,5,11,192,
+        8,11,10,11,12,11,195,9,11,1,11,1,11,5,11,199,8,11,10,11,12,11,202,
+        9,11,1,11,1,11,1,12,1,12,5,12,208,8,12,10,12,12,12,211,9,12,1,12,
+        1,12,3,12,215,8,12,1,13,1,13,1,13,1,13,1,13,1,13,1,13,1,13,1,13,
+        3,13,226,8,13,1,13,1,13,1,13,1,13,1,13,1,13,1,13,1,13,5,13,236,8,
+        13,10,13,12,13,239,9,13,1,14,1,14,1,15,1,15,1,15,1,15,1,15,3,15,
+        248,8,15,1,16,1,16,1,16,1,16,1,17,1,17,1,17,1,17,1,17,1,17,1,18,
+        1,18,1,18,1,18,1,18,1,18,1,18,1,18,1,18,3,18,269,8,18,1,19,1,19,
+        1,19,1,19,1,19,1,20,1,20,5,20,278,8,20,10,20,12,20,281,9,20,1,20,
+        1,20,5,20,285,8,20,10,20,12,20,288,9,20,1,20,1,20,1,20,1,20,1,21,
+        1,21,1,21,1,21,3,21,298,8,21,1,22,1,22,1,22,1,22,3,22,304,8,22,1,
+        22,1,22,1,22,1,22,1,22,1,22,3,22,312,8,22,3,22,314,8,22,1,23,1,23,
+        1,24,1,24,1,24,0,1,26,25,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,
+        30,32,34,36,38,40,42,44,46,48,0,4,2,0,12,14,16,16,1,0,33,34,2,0,
+        10,11,25,28,3,0,1,1,19,19,38,38,338,0,50,1,0,0,0,2,59,1,0,0,0,4,
+        105,1,0,0,0,6,107,1,0,0,0,8,116,1,0,0,0,10,125,1,0,0,0,12,130,1,
+        0,0,0,14,142,1,0,0,0,16,147,1,0,0,0,18,177,1,0,0,0,20,179,1,0,0,
+        0,22,189,1,0,0,0,24,205,1,0,0,0,26,225,1,0,0,0,28,240,1,0,0,0,30,
+        247,1,0,0,0,32,249,1,0,0,0,34,253,1,0,0,0,36,268,1,0,0,0,38,270,
+        1,0,0,0,40,275,1,0,0,0,42,297,1,0,0,0,44,313,1,0,0,0,46,315,1,0,
+        0,0,48,317,1,0,0,0,50,54,3,2,1,0,51,53,5,41,0,0,52,51,1,0,0,0,53,
+        56,1,0,0,0,54,52,1,0,0,0,54,55,1,0,0,0,55,57,1,0,0,0,56,54,1,0,0,
+        0,57,58,5,22,0,0,58,1,1,0,0,0,59,63,5,3,0,0,60,62,5,41,0,0,61,60,
+        1,0,0,0,62,65,1,0,0,0,63,61,1,0,0,0,63,64,1,0,0,0,64,66,1,0,0,0,
+        65,63,1,0,0,0,66,70,3,4,2,0,67,69,5,41,0,0,68,67,1,0,0,0,69,72,1,
+        0,0,0,70,68,1,0,0,0,70,71,1,0,0,0,71,73,1,0,0,0,72,70,1,0,0,0,73,
+        77,5,4,0,0,74,76,5,41,0,0,75,74,1,0,0,0,76,79,1,0,0,0,77,75,1,0,
+        0,0,77,78,1,0,0,0,78,80,1,0,0,0,79,77,1,0,0,0,80,84,3,12,6,0,81,
+        83,5,41,0,0,82,81,1,0,0,0,83,86,1,0,0,0,84,82,1,0,0,0,84,85,1,0,
+        0,0,85,88,1,0,0,0,86,84,1,0,0,0,87,89,3,24,12,0,88,87,1,0,0,0,88,
+        89,1,0,0,0,89,3,1,0,0,0,90,91,3,8,4,0,91,95,5,21,0,0,92,94,5,41,
+        0,0,93,92,1,0,0,0,94,97,1,0,0,0,95,93,1,0,0,0,95,96,1,0,0,0,96,99,
+        1,0,0,0,97,95,1,0,0,0,98,90,1,0,0,0,99,102,1,0,0,0,100,98,1,0,0,
+        0,100,101,1,0,0,0,101,103,1,0,0,0,102,100,1,0,0,0,103,106,3,8,4,
+        0,104,106,3,6,3,0,105,100,1,0,0,0,105,104,1,0,0,0,106,5,1,0,0,0,
+        107,108,5,24,0,0,108,7,1,0,0,0,109,117,5,39,0,0,110,111,5,17,0,0,
+        111,112,5,39,0,0,112,117,5,17,0,0,113,114,5,18,0,0,114,115,5,39,
+        0,0,115,117,5,18,0,0,116,109,1,0,0,0,116,110,1,0,0,0,116,113,1,0,
+        0,0,117,9,1,0,0,0,118,126,5,39,0,0,119,120,5,17,0,0,120,121,5,39,
+        0,0,121,126,5,17,0,0,122,123,5,18,0,0,123,124,5,39,0,0,124,126,5,
+        18,0,0,125,118,1,0,0,0,125,119,1,0,0,0,125,122,1,0,0,0,126,11,1,
+        0,0,0,127,131,3,14,7,0,128,131,3,16,8,0,129,131,3,22,11,0,130,127,
+        1,0,0,0,130,128,1,0,0,0,130,129,1,0,0,0,131,13,1,0,0,0,132,133,3,
+        10,5,0,133,137,5,21,0,0,134,136,5,41,0,0,135,134,1,0,0,0,136,139,
+        1,0,0,0,137,135,1,0,0,0,137,138,1,0,0,0,138,141,1,0,0,0,139,137,
+        1,0,0,0,140,132,1,0,0,0,141,144,1,0,0,0,142,140,1,0,0,0,142,143,
+        1,0,0,0,143,145,1,0,0,0,144,142,1,0,0,0,145,146,3,10,5,0,146,15,
+        1,0,0,0,147,151,3,10,5,0,148,150,5,41,0,0,149,148,1,0,0,0,150,153,
+        1,0,0,0,151,149,1,0,0,0,151,152,1,0,0,0,152,154,1,0,0,0,153,151,
+        1,0,0,0,154,158,3,18,9,0,155,157,5,41,0,0,156,155,1,0,0,0,157,160,
+        1,0,0,0,158,156,1,0,0,0,158,159,1,0,0,0,159,161,1,0,0,0,160,158,
+        1,0,0,0,161,165,3,10,5,0,162,164,5,41,0,0,163,162,1,0,0,0,164,167,
+        1,0,0,0,165,163,1,0,0,0,165,166,1,0,0,0,166,168,1,0,0,0,167,165,
+        1,0,0,0,168,172,5,7,0,0,169,171,5,41,0,0,170,169,1,0,0,0,171,174,
+        1,0,0,0,172,170,1,0,0,0,172,173,1,0,0,0,173,175,1,0,0,0,174,172,
+        1,0,0,0,175,176,3,20,10,0,176,17,1,0,0,0,177,178,7,0,0,0,178,19,
+        1,0,0,0,179,183,3,8,4,0,180,182,5,41,0,0,181,180,1,0,0,0,182,185,
+        1,0,0,0,183,181,1,0,0,0,183,184,1,0,0,0,184,186,1,0,0,0,185,183,
+        1,0,0,0,186,187,5,10,0,0,187,188,3,8,4,0,188,21,1,0,0,0,189,193,
+        3,10,5,0,190,192,5,41,0,0,191,190,1,0,0,0,192,195,1,0,0,0,193,191,
+        1,0,0,0,193,194,1,0,0,0,194,196,1,0,0,0,195,193,1,0,0,0,196,200,
+        5,15,0,0,197,199,5,41,0,0,198,197,1,0,0,0,199,202,1,0,0,0,200,198,
+        1,0,0,0,200,201,1,0,0,0,201,203,1,0,0,0,202,200,1,0,0,0,203,204,
+        3,10,5,0,204,23,1,0,0,0,205,209,5,5,0,0,206,208,5,41,0,0,207,206,
+        1,0,0,0,208,211,1,0,0,0,209,207,1,0,0,0,209,210,1,0,0,0,210,214,
+        1,0,0,0,211,209,1,0,0,0,212,215,3,30,15,0,213,215,3,26,13,0,214,
+        212,1,0,0,0,214,213,1,0,0,0,215,25,1,0,0,0,216,217,6,13,-1,0,217,
+        218,3,30,15,0,218,219,3,28,14,0,219,220,3,26,13,2,220,226,1,0,0,
+        0,221,222,3,30,15,0,222,223,3,28,14,0,223,224,3,30,15,0,224,226,
+        1,0,0,0,225,216,1,0,0,0,225,221,1,0,0,0,226,237,1,0,0,0,227,228,
+        10,4,0,0,228,229,3,28,14,0,229,230,3,26,13,5,230,236,1,0,0,0,231,
+        232,10,3,0,0,232,233,3,28,14,0,233,234,3,30,15,0,234,236,1,0,0,0,
+        235,227,1,0,0,0,235,231,1,0,0,0,236,239,1,0,0,0,237,235,1,0,0,0,
+        237,238,1,0,0,0,238,27,1,0,0,0,239,237,1,0,0,0,240,241,7,1,0,0,241,
+        29,1,0,0,0,242,248,3,32,16,0,243,248,3,34,17,0,244,248,3,36,18,0,
+        245,248,3,38,19,0,246,248,3,40,20,0,247,242,1,0,0,0,247,243,1,0,
+        0,0,247,244,1,0,0,0,247,245,1,0,0,0,247,246,1,0,0,0,248,31,1,0,0,
+        0,249,250,3,8,4,0,250,251,3,46,23,0,251,252,3,48,24,0,252,33,1,0,
+        0,0,253,254,3,8,4,0,254,255,5,32,0,0,255,256,3,48,24,0,256,257,5,
+        33,0,0,257,258,3,48,24,0,258,35,1,0,0,0,259,260,3,8,4,0,260,261,
+        5,35,0,0,261,262,5,38,0,0,262,269,1,0,0,0,263,264,3,8,4,0,264,265,
+        5,8,0,0,265,266,5,35,0,0,266,267,5,38,0,0,267,269,1,0,0,0,268,259,
+        1,0,0,0,268,263,1,0,0,0,269,37,1,0,0,0,270,271,3,42,21,0,271,272,
+        5,30,0,0,272,273,3,44,22,0,273,274,5,31,0,0,274,39,1,0,0,0,275,279,
+        3,8,4,0,276,278,5,41,0,0,277,276,1,0,0,0,278,281,1,0,0,0,279,277,
+        1,0,0,0,279,280,1,0,0,0,280,282,1,0,0,0,281,279,1,0,0,0,282,286,
+        5,6,0,0,283,285,5,41,0,0,284,283,1,0,0,0,285,288,1,0,0,0,286,284,
+        1,0,0,0,286,287,1,0,0,0,287,289,1,0,0,0,288,286,1,0,0,0,289,290,
+        5,30,0,0,290,291,3,44,22,0,291,292,5,31,0,0,292,41,1,0,0,0,293,294,
+        5,39,0,0,294,295,5,23,0,0,295,298,5,39,0,0,296,298,5,39,0,0,297,
+        293,1,0,0,0,297,296,1,0,0,0,298,43,1,0,0,0,299,304,5,1,0,0,300,304,
+        5,38,0,0,301,304,5,19,0,0,302,304,3,8,4,0,303,299,1,0,0,0,303,300,
+        1,0,0,0,303,301,1,0,0,0,303,302,1,0,0,0,304,305,1,0,0,0,305,306,
+        5,21,0,0,306,314,3,44,22,0,307,312,5,1,0,0,308,312,5,38,0,0,309,
+        312,5,19,0,0,310,312,3,8,4,0,311,307,1,0,0,0,311,308,1,0,0,0,311,
+        309,1,0,0,0,311,310,1,0,0,0,312,314,1,0,0,0,313,303,1,0,0,0,313,
+        311,1,0,0,0,314,45,1,0,0,0,315,316,7,2,0,0,316,47,1,0,0,0,317,318,
+        7,3,0,0,318,49,1,0,0,0,34,54,63,70,77,84,88,95,100,105,116,125,130,
+        137,142,151,158,165,172,183,193,200,209,214,225,235,237,247,268,
+        279,286,297,303,311,313
     ]
 
 class SqlParser ( Parser ):
@@ -156,7 +150,7 @@ class SqlParser ( Parser ):
                       "FULL_OUTER_JOIN", "DOUBLE_QUOTATION_MARK", "SINGLE_QUOTATION_MARK", 
                       "NUMBER", "DECIMAL_PART", "COMMA", "SEMICOLON", "POINT", 
                       "STAR", "GREATER", "GEQ", "LOWER", "LEQ", "SLASH", 
-                      "OPAR", "CPAR", "BETWEEN", "AND", "LIKE", "LETTER", 
+                      "OPAR", "CPAR", "BETWEEN", "AND", "OR", "LIKE", "LETTER", 
                       "DIGIT", "TEXT", "STRING", "FUNCTION_NAME", "SPACE" ]
 
     RULE_whole_query = 0
@@ -172,25 +166,27 @@ class SqlParser ( Parser ):
     RULE_inner_join_eq = 10
     RULE_natural_join_stmt = 11
     RULE_where_stmt = 12
-    RULE_where_and_condition = 13
-    RULE_where_condition = 14
-    RULE_where_simple_condition = 15
-    RULE_where_between_condition = 16
-    RULE_where_like_condition = 17
-    RULE_where_function_condition = 18
-    RULE_where_in_condition = 19
-    RULE_function_name = 20
-    RULE_argument_list = 21
-    RULE_eq_type = 22
-    RULE_obj_type = 23
+    RULE_where_and_or_condition = 13
+    RULE_and_or_operators = 14
+    RULE_where_condition = 15
+    RULE_where_simple_condition = 16
+    RULE_where_between_condition = 17
+    RULE_where_like_condition = 18
+    RULE_where_function_condition = 19
+    RULE_where_in_condition = 20
+    RULE_function_name = 21
+    RULE_argument_list = 22
+    RULE_eq_type = 23
+    RULE_obj_type = 24
 
     ruleNames =  [ "whole_query", "query", "select_stmt", "every_columns", 
                    "table_column_name", "table_name", "from_stmt", "no_join_table", 
                    "inner_join_table", "inner_join_type", "inner_join_eq", 
-                   "natural_join_stmt", "where_stmt", "where_and_condition", 
-                   "where_condition", "where_simple_condition", "where_between_condition", 
-                   "where_like_condition", "where_function_condition", "where_in_condition", 
-                   "function_name", "argument_list", "eq_type", "obj_type" ]
+                   "natural_join_stmt", "where_stmt", "where_and_or_condition", 
+                   "and_or_operators", "where_condition", "where_simple_condition", 
+                   "where_between_condition", "where_like_condition", "where_function_condition", 
+                   "where_in_condition", "function_name", "argument_list", 
+                   "eq_type", "obj_type" ]
 
     EOF = Token.EOF
     QUOTED_DATE=1
@@ -226,13 +222,14 @@ class SqlParser ( Parser ):
     CPAR=31
     BETWEEN=32
     AND=33
-    LIKE=34
-    LETTER=35
-    DIGIT=36
-    TEXT=37
-    STRING=38
-    FUNCTION_NAME=39
-    SPACE=40
+    OR=34
+    LIKE=35
+    LETTER=36
+    DIGIT=37
+    TEXT=38
+    STRING=39
+    FUNCTION_NAME=40
+    SPACE=41
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -284,19 +281,19 @@ class SqlParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 48
+            self.state = 50
             self.query()
-            self.state = 52
+            self.state = 54
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==40:
-                self.state = 49
+            while _la==41:
+                self.state = 51
                 self.match(SqlParser.SPACE)
-                self.state = 54
+                self.state = 56
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 55
+            self.state = 57
             self.match(SqlParser.SEMICOLON)
         except RecognitionException as re:
             localctx.exception = re
@@ -359,60 +356,60 @@ class SqlParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 57
+            self.state = 59
             self.match(SqlParser.SELECT)
-            self.state = 61
+            self.state = 63
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==40:
-                self.state = 58
+            while _la==41:
+                self.state = 60
                 self.match(SqlParser.SPACE)
-                self.state = 63
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-
-            self.state = 64
-            self.select_stmt()
-            self.state = 68
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while _la==40:
                 self.state = 65
-                self.match(SqlParser.SPACE)
-                self.state = 70
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 71
-            self.match(SqlParser.FROM)
-            self.state = 75
+            self.state = 66
+            self.select_stmt()
+            self.state = 70
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==40:
-                self.state = 72
+            while _la==41:
+                self.state = 67
                 self.match(SqlParser.SPACE)
-                self.state = 77
+                self.state = 72
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 78
+            self.state = 73
+            self.match(SqlParser.FROM)
+            self.state = 77
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            while _la==41:
+                self.state = 74
+                self.match(SqlParser.SPACE)
+                self.state = 79
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+
+            self.state = 80
             self.from_stmt()
-            self.state = 82
+            self.state = 84
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,4,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
-                    self.state = 79
+                    self.state = 81
                     self.match(SqlParser.SPACE) 
-                self.state = 84
+                self.state = 86
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,4,self._ctx)
 
-            self.state = 86
+            self.state = 88
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==5:
-                self.state = 85
+                self.state = 87
                 self.where_stmt()
 
 
@@ -475,40 +472,40 @@ class SqlParser ( Parser ):
         self.enterRule(localctx, 4, self.RULE_select_stmt)
         self._la = 0 # Token type
         try:
-            self.state = 103
+            self.state = 105
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [17, 18, 38]:
+            if token in [17, 18, 39]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 98
+                self.state = 100
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,7,self._ctx)
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
-                        self.state = 88
+                        self.state = 90
                         self.table_column_name()
-                        self.state = 89
+                        self.state = 91
                         self.match(SqlParser.COMMA)
-                        self.state = 93
+                        self.state = 95
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        while _la==40:
-                            self.state = 90
+                        while _la==41:
+                            self.state = 92
                             self.match(SqlParser.SPACE)
-                            self.state = 95
+                            self.state = 97
                             self._errHandler.sync(self)
                             _la = self._input.LA(1)
                  
-                    self.state = 100
+                    self.state = 102
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,7,self._ctx)
 
-                self.state = 101
+                self.state = 103
                 self.table_column_name()
                 pass
             elif token in [24]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 102
+                self.state = 104
                 self.every_columns()
                 pass
             else:
@@ -553,7 +550,7 @@ class SqlParser ( Parser ):
         self.enterRule(localctx, 6, self.RULE_every_columns)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 105
+            self.state = 107
             self.match(SqlParser.STAR)
         except RecognitionException as re:
             localctx.exception = re
@@ -605,30 +602,30 @@ class SqlParser ( Parser ):
         localctx = SqlParser.Table_column_nameContext(self, self._ctx, self.state)
         self.enterRule(localctx, 8, self.RULE_table_column_name)
         try:
-            self.state = 114
+            self.state = 116
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [38]:
+            if token in [39]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 107
+                self.state = 109
                 self.match(SqlParser.STRING)
                 pass
             elif token in [17]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 108
-                self.match(SqlParser.DOUBLE_QUOTATION_MARK)
-                self.state = 109
-                self.match(SqlParser.STRING)
                 self.state = 110
+                self.match(SqlParser.DOUBLE_QUOTATION_MARK)
+                self.state = 111
+                self.match(SqlParser.STRING)
+                self.state = 112
                 self.match(SqlParser.DOUBLE_QUOTATION_MARK)
                 pass
             elif token in [18]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 111
-                self.match(SqlParser.SINGLE_QUOTATION_MARK)
-                self.state = 112
-                self.match(SqlParser.STRING)
                 self.state = 113
+                self.match(SqlParser.SINGLE_QUOTATION_MARK)
+                self.state = 114
+                self.match(SqlParser.STRING)
+                self.state = 115
                 self.match(SqlParser.SINGLE_QUOTATION_MARK)
                 pass
             else:
@@ -684,30 +681,30 @@ class SqlParser ( Parser ):
         localctx = SqlParser.Table_nameContext(self, self._ctx, self.state)
         self.enterRule(localctx, 10, self.RULE_table_name)
         try:
-            self.state = 123
+            self.state = 125
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [38]:
+            if token in [39]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 116
+                self.state = 118
                 self.match(SqlParser.STRING)
                 pass
             elif token in [17]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 117
-                self.match(SqlParser.DOUBLE_QUOTATION_MARK)
-                self.state = 118
-                self.match(SqlParser.STRING)
                 self.state = 119
+                self.match(SqlParser.DOUBLE_QUOTATION_MARK)
+                self.state = 120
+                self.match(SqlParser.STRING)
+                self.state = 121
                 self.match(SqlParser.DOUBLE_QUOTATION_MARK)
                 pass
             elif token in [18]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 120
-                self.match(SqlParser.SINGLE_QUOTATION_MARK)
-                self.state = 121
-                self.match(SqlParser.STRING)
                 self.state = 122
+                self.match(SqlParser.SINGLE_QUOTATION_MARK)
+                self.state = 123
+                self.match(SqlParser.STRING)
+                self.state = 124
                 self.match(SqlParser.SINGLE_QUOTATION_MARK)
                 pass
             else:
@@ -760,24 +757,24 @@ class SqlParser ( Parser ):
         localctx = SqlParser.From_stmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 12, self.RULE_from_stmt)
         try:
-            self.state = 128
+            self.state = 130
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,11,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 125
+                self.state = 127
                 self.no_join_table()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 126
+                self.state = 128
                 self.inner_join_table()
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 127
+                self.state = 129
                 self.natural_join_stmt()
                 pass
 
@@ -838,30 +835,30 @@ class SqlParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 140
+            self.state = 142
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,13,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
-                    self.state = 130
+                    self.state = 132
                     self.table_name()
-                    self.state = 131
+                    self.state = 133
                     self.match(SqlParser.COMMA)
-                    self.state = 135
+                    self.state = 137
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    while _la==40:
-                        self.state = 132
+                    while _la==41:
+                        self.state = 134
                         self.match(SqlParser.SPACE)
-                        self.state = 137
+                        self.state = 139
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
              
-                self.state = 142
+                self.state = 144
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,13,self._ctx)
 
-            self.state = 143
+            self.state = 145
             self.table_name()
         except RecognitionException as re:
             localctx.exception = re
@@ -924,55 +921,55 @@ class SqlParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 145
+            self.state = 147
             self.table_name()
-            self.state = 149
+            self.state = 151
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==40:
-                self.state = 146
+            while _la==41:
+                self.state = 148
                 self.match(SqlParser.SPACE)
-                self.state = 151
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-
-            self.state = 152
-            self.inner_join_type()
-            self.state = 156
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while _la==40:
                 self.state = 153
-                self.match(SqlParser.SPACE)
-                self.state = 158
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 159
-            self.table_name()
-            self.state = 163
+            self.state = 154
+            self.inner_join_type()
+            self.state = 158
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==40:
+            while _la==41:
+                self.state = 155
+                self.match(SqlParser.SPACE)
                 self.state = 160
-                self.match(SqlParser.SPACE)
-                self.state = 165
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 166
-            self.match(SqlParser.ON)
-            self.state = 170
+            self.state = 161
+            self.table_name()
+            self.state = 165
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==40:
-                self.state = 167
+            while _la==41:
+                self.state = 162
                 self.match(SqlParser.SPACE)
-                self.state = 172
+                self.state = 167
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 173
+            self.state = 168
+            self.match(SqlParser.ON)
+            self.state = 172
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            while _la==41:
+                self.state = 169
+                self.match(SqlParser.SPACE)
+                self.state = 174
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+
+            self.state = 175
             self.inner_join_eq()
         except RecognitionException as re:
             localctx.exception = re
@@ -1023,7 +1020,7 @@ class SqlParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 175
+            self.state = 177
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 94208) != 0)):
                 self._errHandler.recoverInline(self)
@@ -1083,21 +1080,21 @@ class SqlParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 177
+            self.state = 179
             self.table_column_name()
-            self.state = 181
+            self.state = 183
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==40:
-                self.state = 178
+            while _la==41:
+                self.state = 180
                 self.match(SqlParser.SPACE)
-                self.state = 183
+                self.state = 185
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 184
+            self.state = 186
             self.match(SqlParser.EQ)
-            self.state = 185
+            self.state = 187
             self.table_column_name()
         except RecognitionException as re:
             localctx.exception = re
@@ -1152,31 +1149,31 @@ class SqlParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 187
+            self.state = 189
             self.table_name()
-            self.state = 191
+            self.state = 193
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==40:
-                self.state = 188
+            while _la==41:
+                self.state = 190
                 self.match(SqlParser.SPACE)
-                self.state = 193
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-
-            self.state = 194
-            self.match(SqlParser.NATURAL_JOIN)
-            self.state = 198
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while _la==40:
                 self.state = 195
-                self.match(SqlParser.SPACE)
-                self.state = 200
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 201
+            self.state = 196
+            self.match(SqlParser.NATURAL_JOIN)
+            self.state = 200
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            while _la==41:
+                self.state = 197
+                self.match(SqlParser.SPACE)
+                self.state = 202
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+
+            self.state = 203
             self.table_name()
         except RecognitionException as re:
             localctx.exception = re
@@ -1201,8 +1198,8 @@ class SqlParser ( Parser ):
             return self.getTypedRuleContext(SqlParser.Where_conditionContext,0)
 
 
-        def where_and_condition(self):
-            return self.getTypedRuleContext(SqlParser.Where_and_conditionContext,0)
+        def where_and_or_condition(self):
+            return self.getTypedRuleContext(SqlParser.Where_and_or_conditionContext,0)
 
 
         def SPACE(self, i:int=None):
@@ -1232,29 +1229,29 @@ class SqlParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 203
+            self.state = 205
             self.match(SqlParser.WHERE)
-            self.state = 207
+            self.state = 209
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==40:
-                self.state = 204
+            while _la==41:
+                self.state = 206
                 self.match(SqlParser.SPACE)
-                self.state = 209
+                self.state = 211
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 212
+            self.state = 214
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,22,self._ctx)
             if la_ == 1:
-                self.state = 210
+                self.state = 212
                 self.where_condition()
                 pass
 
             elif la_ == 2:
-                self.state = 211
-                self.where_and_condition()
+                self.state = 213
+                self.where_and_or_condition(0)
                 pass
 
 
@@ -1267,15 +1264,12 @@ class SqlParser ( Parser ):
         return localctx
 
 
-    class Where_and_conditionContext(ParserRuleContext):
+    class Where_and_or_conditionContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
-
-        def OPAR(self):
-            return self.getToken(SqlParser.OPAR, 0)
 
         def where_condition(self, i:int=None):
             if i is None:
@@ -1284,134 +1278,154 @@ class SqlParser ( Parser ):
                 return self.getTypedRuleContext(SqlParser.Where_conditionContext,i)
 
 
+        def and_or_operators(self):
+            return self.getTypedRuleContext(SqlParser.And_or_operatorsContext,0)
+
+
+        def where_and_or_condition(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(SqlParser.Where_and_or_conditionContext)
+            else:
+                return self.getTypedRuleContext(SqlParser.Where_and_or_conditionContext,i)
+
+
+        def getRuleIndex(self):
+            return SqlParser.RULE_where_and_or_condition
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterWhere_and_or_condition" ):
+                listener.enterWhere_and_or_condition(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitWhere_and_or_condition" ):
+                listener.exitWhere_and_or_condition(self)
+
+
+
+    def where_and_or_condition(self, _p:int=0):
+        _parentctx = self._ctx
+        _parentState = self.state
+        localctx = SqlParser.Where_and_or_conditionContext(self, self._ctx, _parentState)
+        _prevctx = localctx
+        _startState = 26
+        self.enterRecursionRule(localctx, 26, self.RULE_where_and_or_condition, _p)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 225
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,23,self._ctx)
+            if la_ == 1:
+                self.state = 217
+                self.where_condition()
+                self.state = 218
+                self.and_or_operators()
+                self.state = 219
+                self.where_and_or_condition(2)
+                pass
+
+            elif la_ == 2:
+                self.state = 221
+                self.where_condition()
+                self.state = 222
+                self.and_or_operators()
+                self.state = 223
+                self.where_condition()
+                pass
+
+
+            self._ctx.stop = self._input.LT(-1)
+            self.state = 237
+            self._errHandler.sync(self)
+            _alt = self._interp.adaptivePredict(self._input,25,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
+                    if self._parseListeners is not None:
+                        self.triggerExitRuleEvent()
+                    _prevctx = localctx
+                    self.state = 235
+                    self._errHandler.sync(self)
+                    la_ = self._interp.adaptivePredict(self._input,24,self._ctx)
+                    if la_ == 1:
+                        localctx = SqlParser.Where_and_or_conditionContext(self, _parentctx, _parentState)
+                        self.pushNewRecursionContext(localctx, _startState, self.RULE_where_and_or_condition)
+                        self.state = 227
+                        if not self.precpred(self._ctx, 4):
+                            from antlr4.error.Errors import FailedPredicateException
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 4)")
+                        self.state = 228
+                        self.and_or_operators()
+                        self.state = 229
+                        self.where_and_or_condition(5)
+                        pass
+
+                    elif la_ == 2:
+                        localctx = SqlParser.Where_and_or_conditionContext(self, _parentctx, _parentState)
+                        self.pushNewRecursionContext(localctx, _startState, self.RULE_where_and_or_condition)
+                        self.state = 231
+                        if not self.precpred(self._ctx, 3):
+                            from antlr4.error.Errors import FailedPredicateException
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 3)")
+                        self.state = 232
+                        self.and_or_operators()
+                        self.state = 233
+                        self.where_condition()
+                        pass
+
+             
+                self.state = 239
+                self._errHandler.sync(self)
+                _alt = self._interp.adaptivePredict(self._input,25,self._ctx)
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.unrollRecursionContexts(_parentctx)
+        return localctx
+
+
+    class And_or_operatorsContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
         def AND(self):
             return self.getToken(SqlParser.AND, 0)
 
-        def CPAR(self):
-            return self.getToken(SqlParser.CPAR, 0)
-
-        def where_and_condition(self):
-            return self.getTypedRuleContext(SqlParser.Where_and_conditionContext,0)
-
-
-        def SPACE(self, i:int=None):
-            if i is None:
-                return self.getTokens(SqlParser.SPACE)
-            else:
-                return self.getToken(SqlParser.SPACE, i)
+        def OR(self):
+            return self.getToken(SqlParser.OR, 0)
 
         def getRuleIndex(self):
-            return SqlParser.RULE_where_and_condition
+            return SqlParser.RULE_and_or_operators
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterWhere_and_condition" ):
-                listener.enterWhere_and_condition(self)
+            if hasattr( listener, "enterAnd_or_operators" ):
+                listener.enterAnd_or_operators(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitWhere_and_condition" ):
-                listener.exitWhere_and_condition(self)
+            if hasattr( listener, "exitAnd_or_operators" ):
+                listener.exitAnd_or_operators(self)
 
 
 
 
-    def where_and_condition(self):
+    def and_or_operators(self):
 
-        localctx = SqlParser.Where_and_conditionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 26, self.RULE_where_and_condition)
+        localctx = SqlParser.And_or_operatorsContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 28, self.RULE_and_or_operators)
         self._la = 0 # Token type
         try:
-            self.state = 253
-            self._errHandler.sync(self)
-            token = self._input.LA(1)
-            if token in [30]:
-                self.enterOuterAlt(localctx, 1)
-                self.state = 214
-                self.match(SqlParser.OPAR)
-                self.state = 215
-                self.where_condition()
-                self.state = 219
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-                while _la==40:
-                    self.state = 216
-                    self.match(SqlParser.SPACE)
-                    self.state = 221
-                    self._errHandler.sync(self)
-                    _la = self._input.LA(1)
-
-                self.state = 222
-                self.match(SqlParser.AND)
-                self.state = 226
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-                while _la==40:
-                    self.state = 223
-                    self.match(SqlParser.SPACE)
-                    self.state = 228
-                    self._errHandler.sync(self)
-                    _la = self._input.LA(1)
-
-                self.state = 231
-                self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,25,self._ctx)
-                if la_ == 1:
-                    self.state = 229
-                    self.where_condition()
-                    pass
-
-                elif la_ == 2:
-                    self.state = 230
-                    self.where_and_condition()
-                    pass
-
-
-                self.state = 233
-                self.match(SqlParser.CPAR)
-                pass
-            elif token in [17, 18, 38]:
-                self.enterOuterAlt(localctx, 2)
-                self.state = 235
-                self.where_condition()
-                self.state = 239
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-                while _la==40:
-                    self.state = 236
-                    self.match(SqlParser.SPACE)
-                    self.state = 241
-                    self._errHandler.sync(self)
-                    _la = self._input.LA(1)
-
-                self.state = 242
-                self.match(SqlParser.AND)
-                self.state = 246
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-                while _la==40:
-                    self.state = 243
-                    self.match(SqlParser.SPACE)
-                    self.state = 248
-                    self._errHandler.sync(self)
-                    _la = self._input.LA(1)
-
-                self.state = 251
-                self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,28,self._ctx)
-                if la_ == 1:
-                    self.state = 249
-                    self.where_condition()
-                    pass
-
-                elif la_ == 2:
-                    self.state = 250
-                    self.where_and_condition()
-                    pass
-
-
-                pass
+            self.enterOuterAlt(localctx, 1)
+            self.state = 240
+            _la = self._input.LA(1)
+            if not(_la==33 or _la==34):
+                self._errHandler.recoverInline(self)
             else:
-                raise NoViableAltException(self)
-
+                self._errHandler.reportMatch(self)
+                self.consume()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1446,10 +1460,10 @@ class SqlParser ( Parser ):
 
         def where_in_condition(self):
             return self.getTypedRuleContext(SqlParser.Where_in_conditionContext,0)
-
-
-        def where_and_condition(self):
-            return self.getTypedRuleContext(SqlParser.Where_and_conditionContext,0)
+        
+        
+        def where_and_or_condition(self):
+            return self.getTypedRuleContext(SqlParser.Where_and_or_conditionContext,0)
 
 
         def getRuleIndex(self):
@@ -1469,38 +1483,38 @@ class SqlParser ( Parser ):
     def where_condition(self):
 
         localctx = SqlParser.Where_conditionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 28, self.RULE_where_condition)
+        self.enterRule(localctx, 30, self.RULE_where_condition)
         try:
-            self.state = 260
+            self.state = 247
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,30,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,26,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 255
+                self.state = 242
                 self.where_simple_condition()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 256
+                self.state = 243
                 self.where_between_condition()
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 257
+                self.state = 244
                 self.where_like_condition()
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 258
+                self.state = 245
                 self.where_function_condition()
                 pass
 
             elif la_ == 5:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 259
+                self.state = 246
                 self.where_in_condition()
                 pass
 
@@ -1550,14 +1564,14 @@ class SqlParser ( Parser ):
     def where_simple_condition(self):
 
         localctx = SqlParser.Where_simple_conditionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 30, self.RULE_where_simple_condition)
+        self.enterRule(localctx, 32, self.RULE_where_simple_condition)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 262
+            self.state = 249
             self.table_column_name()
-            self.state = 263
+            self.state = 250
             self.eq_type()
-            self.state = 264
+            self.state = 251
             self.obj_type()
         except RecognitionException as re:
             localctx.exception = re
@@ -1609,18 +1623,18 @@ class SqlParser ( Parser ):
     def where_between_condition(self):
 
         localctx = SqlParser.Where_between_conditionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 32, self.RULE_where_between_condition)
+        self.enterRule(localctx, 34, self.RULE_where_between_condition)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 266
+            self.state = 253
             self.table_column_name()
-            self.state = 267
+            self.state = 254
             self.match(SqlParser.BETWEEN)
-            self.state = 268
+            self.state = 255
             self.obj_type()
-            self.state = 269
+            self.state = 256
             self.match(SqlParser.AND)
-            self.state = 270
+            self.state = 257
             self.obj_type()
         except RecognitionException as re:
             localctx.exception = re
@@ -1668,30 +1682,30 @@ class SqlParser ( Parser ):
     def where_like_condition(self):
 
         localctx = SqlParser.Where_like_conditionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 34, self.RULE_where_like_condition)
+        self.enterRule(localctx, 36, self.RULE_where_like_condition)
         try:
-            self.state = 281
+            self.state = 268
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,31,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,27,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 272
+                self.state = 259
                 self.table_column_name()
-                self.state = 273
+                self.state = 260
                 self.match(SqlParser.LIKE)
-                self.state = 274
+                self.state = 261
                 self.match(SqlParser.TEXT)
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 276
+                self.state = 263
                 self.table_column_name()
-                self.state = 277
+                self.state = 264
                 self.match(SqlParser.NOT)
-                self.state = 278
+                self.state = 265
                 self.match(SqlParser.LIKE)
-                self.state = 279
+                self.state = 266
                 self.match(SqlParser.TEXT)
                 pass
 
@@ -1743,16 +1757,16 @@ class SqlParser ( Parser ):
     def where_function_condition(self):
 
         localctx = SqlParser.Where_function_conditionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 36, self.RULE_where_function_condition)
+        self.enterRule(localctx, 38, self.RULE_where_function_condition)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 283
+            self.state = 270
             self.function_name()
-            self.state = 284
+            self.state = 271
             self.match(SqlParser.OPAR)
-            self.state = 285
+            self.state = 272
             self.argument_list()
-            self.state = 286
+            self.state = 273
             self.match(SqlParser.CPAR)
         except RecognitionException as re:
             localctx.exception = re
@@ -1810,39 +1824,39 @@ class SqlParser ( Parser ):
     def where_in_condition(self):
 
         localctx = SqlParser.Where_in_conditionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 38, self.RULE_where_in_condition)
+        self.enterRule(localctx, 40, self.RULE_where_in_condition)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 288
+            self.state = 275
             self.table_column_name()
-            self.state = 292
+            self.state = 279
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==40:
-                self.state = 289
+            while _la==41:
+                self.state = 276
                 self.match(SqlParser.SPACE)
-                self.state = 294
+                self.state = 281
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 295
+            self.state = 282
             self.match(SqlParser.IN)
-            self.state = 299
+            self.state = 286
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==40:
-                self.state = 296
+            while _la==41:
+                self.state = 283
                 self.match(SqlParser.SPACE)
-                self.state = 301
+                self.state = 288
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 302
+            self.state = 289
             self.match(SqlParser.OPAR)
-            self.state = 303
+            self.state = 290
             self.argument_list()
-            self.state = 304
+            self.state = 291
             self.match(SqlParser.CPAR)
         except RecognitionException as re:
             localctx.exception = re
@@ -1886,24 +1900,24 @@ class SqlParser ( Parser ):
     def function_name(self):
 
         localctx = SqlParser.Function_nameContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 40, self.RULE_function_name)
+        self.enterRule(localctx, 42, self.RULE_function_name)
         try:
-            self.state = 310
+            self.state = 297
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,34,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,30,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 306
+                self.state = 293
                 self.match(SqlParser.STRING)
-                self.state = 307
+                self.state = 294
                 self.match(SqlParser.POINT)
-                self.state = 308
+                self.state = 295
                 self.match(SqlParser.STRING)
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 309
+                self.state = 296
                 self.match(SqlParser.STRING)
                 pass
 
@@ -1961,60 +1975,60 @@ class SqlParser ( Parser ):
     def argument_list(self):
 
         localctx = SqlParser.Argument_listContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 42, self.RULE_argument_list)
+        self.enterRule(localctx, 44, self.RULE_argument_list)
         try:
-            self.state = 326
+            self.state = 313
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,37,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,33,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 316
+                self.state = 303
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
                 if token in [1]:
-                    self.state = 312
+                    self.state = 299
                     self.match(SqlParser.QUOTED_DATE)
                     pass
-                elif token in [37]:
-                    self.state = 313
+                elif token in [38]:
+                    self.state = 300
                     self.match(SqlParser.TEXT)
                     pass
                 elif token in [19]:
-                    self.state = 314
+                    self.state = 301
                     self.match(SqlParser.NUMBER)
                     pass
-                elif token in [17, 18, 38]:
-                    self.state = 315
+                elif token in [17, 18, 39]:
+                    self.state = 302
                     self.table_column_name()
                     pass
                 else:
                     raise NoViableAltException(self)
 
-                self.state = 318
+                self.state = 305
                 self.match(SqlParser.COMMA)
-                self.state = 319
+                self.state = 306
                 self.argument_list()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 324
+                self.state = 311
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
                 if token in [1]:
-                    self.state = 320
+                    self.state = 307
                     self.match(SqlParser.QUOTED_DATE)
                     pass
-                elif token in [37]:
-                    self.state = 321
+                elif token in [38]:
+                    self.state = 308
                     self.match(SqlParser.TEXT)
                     pass
                 elif token in [19]:
-                    self.state = 322
+                    self.state = 309
                     self.match(SqlParser.NUMBER)
                     pass
-                elif token in [17, 18, 38]:
-                    self.state = 323
+                elif token in [17, 18, 39]:
+                    self.state = 310
                     self.table_column_name()
                     pass
                 else:
@@ -2074,11 +2088,11 @@ class SqlParser ( Parser ):
     def eq_type(self):
 
         localctx = SqlParser.Eq_typeContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 44, self.RULE_eq_type)
+        self.enterRule(localctx, 46, self.RULE_eq_type)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 328
+            self.state = 315
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 503319552) != 0)):
                 self._errHandler.recoverInline(self)
@@ -2127,13 +2141,13 @@ class SqlParser ( Parser ):
     def obj_type(self):
 
         localctx = SqlParser.Obj_typeContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 46, self.RULE_obj_type)
+        self.enterRule(localctx, 48, self.RULE_obj_type)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 330
+            self.state = 317
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 137439477762) != 0)):
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 274878431234) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -2146,6 +2160,26 @@ class SqlParser ( Parser ):
             self.exitRule()
         return localctx
 
+
+
+    def sempred(self, localctx:RuleContext, ruleIndex:int, predIndex:int):
+        if self._predicates == None:
+            self._predicates = dict()
+        self._predicates[13] = self.where_and_or_condition_sempred
+        pred = self._predicates.get(ruleIndex, None)
+        if pred is None:
+            raise Exception("No predicate with index:" + str(ruleIndex))
+        else:
+            return pred(localctx, predIndex)
+
+    def where_and_or_condition_sempred(self, localctx:Where_and_or_conditionContext, predIndex:int):
+            if predIndex == 0:
+                return self.precpred(self._ctx, 4)
+         
+
+            if predIndex == 1:
+                return self.precpred(self._ctx, 3)
+         
 
 
 

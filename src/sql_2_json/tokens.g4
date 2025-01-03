@@ -52,6 +52,7 @@ OPAR: '(';
 CPAR: ')';
 BETWEEN: 'BETWEEN' | 'between';
 AND: 'AND' | 'and';
+OR: 'OR' | 'or';
 LIKE: 'like' | 'LIKE';
 
 LETTER: [a-zA-Z];
