@@ -25,6 +25,7 @@ class SqlListener(ParseTreeListener):
         self.where_mode = ""
         self.where_and_level = 0
         self.sub_where_and_level = 0
+        self.current_updated_sub_conditions = []
 
     # Enter a parse tree produced by SqlParser#whole_query.
     def enterWhole_query(self, ctx:SqlParser.Whole_queryContext):
@@ -186,20 +187,67 @@ class SqlListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by SqlParser#where_and_or_condition.
-    def enterWhere_and_or_condition(self, ctx:SqlParser.Where_and_or_conditionContext):
-        if ctx.getChild(0).getText() == '(':
-            self.where_and_level += 1
-            self.sub_where_and_level = 0
-        else:
-            self.sub_where_and_level += 1
-        if self.where_and_level >= len(self.conditions):
-            self.conditions.append({
-                'type': 'AND',
-                'conditions': []
-            })
-            self.where_mode = 'AND'
-        ctx.where_condition()
+    # Enter a parse tree produced by SqlParser#end_of_where_and_or.
+    def enterEnd_of_where_and_or(self, ctx:SqlParser.End_of_where_and_orContext):
+        print(f'Enter end of where and or : {ctx.getText()}')
+        operator = [elem.getText()
+                    for elem in ctx.getChildren()
+                    if type(elem).__name__ == 'And_or_operatorsContext'][0]
+        self.conditions.append({'type': operator.upper(),'conditions': []})
+        self.where_mode = operator.upper()
+
+    # Exit a parse tree produced by SqlParser#end_of_where_and_or.
+    def exitEnd_of_where_and_or(self, ctx:SqlParser.End_of_where_and_orContext):
+        print("End of end of where and or")
+
+
+    # Enter a parse tree produced by SqlParser#right_and_or.
+    def enterRight_and_or(self, ctx:SqlParser.Right_and_orContext):
+        print(f"Enter right and or : {ctx.getText()}")
+        operator = [child.getText() for child
+                    in ctx.getChildren()
+                    if type(child).__name__ == 'And_or_operatorsContext'][0]
+        self.current_updated_sub_conditions.append({
+            'operator':operator.upper(),
+            'conditions':[]
+        })
+        # If the children count in 
+        if len(self.current_updated_sub_conditions) > 1:
+            upper_branch = self.current_updated_sub_conditions[-2]
+            upper_branch.append(self.current_updated_sub_conditions[-1])
+            
+
+    # Exit a parse tree produced by SqlParser#right_and_or.
+    def exitRight_and_or(self, ctx:SqlParser.Right_and_orContext):
+        print("Exit right and or")
+        conditions_types = [
+            'Where_conditionContext',
+            'End_of_where_and_orContext',
+            'Left_and_orContext',
+            'Right_and_orContext',
+            'Double_and_orContext'
+        ]
+        children_count = len([child for child in ctx.getChildren() if type(child).__name__ in conditions_types])
+        if len(self.current_updated_sub_conditions[-1]['conditions']) == children_count:
+            del self.current_updated_sub_conditions[-1]
+
+
+    # Enter a parse tree produced by SqlParser#left_and_or.
+    def enterLeft_and_or(self, ctx:SqlParser.Left_and_orContext):
+        print([type(child) for child in ctx.getChildren()])
+
+    # Exit a parse tree produced by SqlParser#left_and_or.
+    def exitLeft_and_or(self, ctx:SqlParser.Left_and_orContext):
+        pass
+
+
+    # Enter a parse tree produced by SqlParser#double_and_or.
+    def enterDouble_and_or(self, ctx:SqlParser.Double_and_orContext):
+        pass
+
+    # Exit a parse tree produced by SqlParser#double_and_or.
+    def exitDouble_and_or(self, ctx:SqlParser.Double_and_orContext):
+        pass
 
     # Exit a parse tree produced by SqlParser#where_and_or_condition.
     def exitWhere_and_or_condition(self, ctx:SqlParser.Where_and_or_conditionContext):

@@ -14,7 +14,7 @@ ON: 'on' | 'ON';
 NOT: 'not' | 'NOT';
 EXCEPT: 'except' | 'EXCEPT';
 EQ: '=';
-DIFFERENT: '!=';
+DIFFERENT: '!='|'<>';
 
 INNER_JOIN: 'inner join' | 'INNER JOIN';
 LEFT_JOIN: 'left join' | 'LEFT JOIN';

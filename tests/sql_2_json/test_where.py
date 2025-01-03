@@ -1,5 +1,7 @@
 import unittest
 
+from pprint import pprint
+
 from src.sql_2_json import SQL2JSON
 
 
@@ -240,7 +242,7 @@ class TestWhere(unittest.TestCase):
 
         # Given
         test_object = SQL2JSON()
-        example_query = "select * from test where col != '32' and col2 != '42' or col3 != '52';"
+        example_query = "select * from test where (col3 != '52') or (col != '32' and col2 != '42') ;"
 
         # Acts
         test_object.parse_request(example_query)

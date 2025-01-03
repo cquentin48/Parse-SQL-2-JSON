@@ -5,11 +5,10 @@ import tokens;
 where_stmt:
 	WHERE SPACE* (where_condition | where_and_or_condition);
 where_and_or_condition:
-	where_and_or_condition and_or_operators where_and_or_condition
-	| where_and_or_condition and_or_operators where_condition
-	| where_condition and_or_operators where_and_or_condition
-	| where_condition and_or_operators where_condition;
-
+	where_condition and_or_operators where_condition #end_of_where_and_or
+	| OPAR where_condition CPAR and_or_operators OPAR where_and_or_condition CPAR #right_and_or
+	| OPAR where_and_or_condition CPAR and_or_operators OPAR where_condition CPAR #left_and_or
+	| OPAR where_and_or_condition CPAR and_or_operators OPAR where_and_or_condition CPAR #double_and_or;
 and_or_operators : AND | OR;
 
 where_condition:
